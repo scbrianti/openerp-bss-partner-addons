@@ -21,7 +21,7 @@
 
 {
     'name': 'Partner References',
-    'version': '7.0.1.4',
+    'version': '7.0.2.0',
     "category" : 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """A module to make partner reference readonly, unique, and automatically created from a sequence.""",

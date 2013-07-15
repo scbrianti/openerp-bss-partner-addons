@@ -21,7 +21,7 @@
 
 {
     'name': 'Resident Permits',
-    'version': 'master',
+    'version': '7.0.1.4',
     "category" : 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """A list of Swiss resident permit""",

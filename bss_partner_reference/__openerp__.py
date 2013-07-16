@@ -25,7 +25,7 @@
     "category" : 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """A module to make partner reference readonly, unique, and automatically created from a sequence.""",
-    Bluestar Solutions Sàrl
+    'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
     'depends': [],
     'update_xml': ['partner_sequence.xml',

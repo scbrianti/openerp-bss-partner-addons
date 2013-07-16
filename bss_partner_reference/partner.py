@@ -42,12 +42,11 @@ class bluestar_partner_reference_config(osv.osv_memory):
             if config['generate_ref'] == 'all':
                 partner_ids += self.pool.get('res.partner').search(cr, uid, [], context=None)
             elif config['generate_ref'] == 'empty':
-                partner_ids += self.pool.get('res.partner').search(cr, uid, [('ref', '=', False)], context=None)
-                partner_ids += self.pool.get('res.partner').search(cr, uid, [('ref', '=', '')], context=None)
+                partner_ids += self.pool.get('res.partner').search(cr, uid, ['|', ('ref', '=', False), ('ref', '=', '')], context=None)
             for partner_id in partner_ids:
-                    self.pool.get('res.partner').\
-                        write(cr, uid, partner_id,
-                              {'ref': self.pool.get('ir.sequence').get(cr, uid, 'bluestar.partner.ref')})
+                self.pool.get('res.partner').\
+                    write(cr, uid, partner_id,
+                          {'ref': self.pool.get('ir.sequence').get(cr, uid, 'bluestar.partner.ref')})
 
             partner_ids = []
             partner_ids += self.pool.get('res.partner').search(cr, uid, [('ref', '=', False)], context=None)
@@ -64,7 +63,7 @@ class bluestar_partner_reference_config(osv.osv_memory):
             if duplicates:
                 raise osv.except_osv('Erreur', 'There is duplicates references !')
             
-        return super(bluestar_partner_reference_config, self).execute(cr, uid, ids, context=context)
+        return True
         
 bluestar_partner_reference_config()
 

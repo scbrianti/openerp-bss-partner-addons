@@ -28,7 +28,6 @@
     'author': 'bluestar solutions sàrl',
     'website': 'http://www.blues2.ch',
     'depends': [],
-    'init_xml': ['partner_data.xml'],
     'update_xml': ['partner_sequence.xml',
                    'partner_view.xml'],
     'demo_xml': [],

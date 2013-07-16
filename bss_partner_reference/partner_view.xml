@@ -16,6 +16,22 @@
                 </group>
 			</field>
 		</record>
+		
+		<record id="action_bss_partner_reference_config" model="ir.actions.act_window">
+			<field name="name">Migrate Partner Reference</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">bss.partner.reference.config</field>
+			<field name="view_type">form</field>
+			<field name="view_id" ref="view_bluestar_partner_reference_config_form" />
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+		
+		<record id="bss_partner_reference_config_todo" model="ir.actions.todo">
+            <field name="action_id" ref="action_bss_partner_reference_config"/>
+            <field name="sequence">200</field>
+            <field name="type">automatic</field>
+        </record>
 
 	</data>
 </openerp>

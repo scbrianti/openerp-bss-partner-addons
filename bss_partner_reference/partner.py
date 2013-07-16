@@ -63,7 +63,7 @@ class bluestar_partner_reference_config(osv.osv_memory):
             if duplicates:
                 raise osv.except_osv('Erreur', 'There is duplicates references !')
             
-        return super(bluestar_partner_reference_config, self).execute(cr, uid, ids, context=context)
+        return True
         
 bluestar_partner_reference_config()
 

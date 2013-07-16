@@ -25,7 +25,7 @@
     "category" : 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """A list of marital status.""",
-    'author': 'bluestar solutions sàrl',
+    Bluestar Solutions Sàrl
     'website': 'http://www.blues2.ch',
     'depends': [],
     'init_xml': ['marital_status_data.xml'],

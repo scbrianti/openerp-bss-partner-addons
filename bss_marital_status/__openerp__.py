@@ -50,6 +50,7 @@ The list is initialized with this standard values :
     'installable': True,
     'application': False,
     'auto_install': False,
+    'images' : ['images/marital_status_tree.png',],
 }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

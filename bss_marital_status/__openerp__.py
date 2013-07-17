@@ -31,6 +31,7 @@ Manage marital status
 Add a manageable marital status list which can be linked to an OpenERP object like partner. 
 
 The list is initialized with this standard values :
+
 * Married
 * Divorced
 * Single

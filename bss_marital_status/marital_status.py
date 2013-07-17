@@ -27,7 +27,7 @@ class bluestar_marital_status(osv.osv):
     _description = "Marital status"
 
     _columns = {
-        'name': fields.char('Nom', size=20, required=True, translate=True),
+        'name': fields.char('Name', size=32, required=True, translate=True),
     }
 
     _defaults = {

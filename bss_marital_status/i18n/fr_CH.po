@@ -1,32 +1,57 @@
 # Translation of OpenERP Server.
 # This file contains the translation of the following modules:
-#	* bss-marital-status
+#	* bss_marital_status
 #
 msgid ""
 msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-17 13:22+0000\n"
+"PO-Revision-Date: 2013-07-17 13:22+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
 
-#: model:bluestar.marital_status,name:bss_marital_status.bluestar_marital_status_married
-#. module: bss-marital-status
-msgid "Married"
-msgstr "Marié"
+#. module: bss_marital_status
+#: field:bluestar.marital_status,name:0
+msgid "Nom"
+msgstr "Nom"
 
-#: model:bluestar.marital_status,name:bss_marital_status.bluestar_marital_status_divorced
-#. module: bss-marital-status
+#. module: bss_marital_status
+#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_widower
+msgid "Widow, widower"
+msgstr "Veuve, veuf"
+
+#. module: bss_marital_status
+#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_divorced
 msgid "Divorced"
 msgstr "Divorcé"
 
-#: model:bluestar.marital_status,name:bss_marital_status.bluestar_marital_status_single
-#. module: bss-marital-status
+#. module: bss_marital_status
+#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_married
+msgid "Married"
+msgstr "Marrié"
+
+#. module: bss_marital_status
+#: model:ir.model,name:bss_marital_status.model_bluestar_marital_status
+msgid "Marital status"
+msgstr "État civil"
+
+#. module: bss_marital_status
+#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_pacse
+msgid "PACS (civil partners"
+msgstr "PACS (civil partners"
+
+#. module: bss_marital_status
+#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_single
 msgid "Single"
 msgstr "Célibataire"
 
-#: model:bluestar.marital_status,name:bss_marital_status.bluestar_marital_status_pacse
-#. module: bss-marital-status
-msgid "PACS (civil partnership)"
-msgstr "Pacsé"
-
-#: model:bluestar.marital_status,name:bss_marital_status.bluestar_marital_status_widower
-#. module: bss-marital-status
-msgid "Widow, widower"
-msgstr "Veuve, veuf"
+#. module: bss_marital_status
+#: model:ir.actions.act_window,name:bss_marital_status.action_bluestar_marital_status_form
+msgid "États civil"
+msgstr "États civil"
 

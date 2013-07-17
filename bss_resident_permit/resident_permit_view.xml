@@ -15,7 +15,7 @@
 		</record>
 
 		<record model="ir.actions.act_window" id="action_bluestar_resident_permit_form">
-			<field name="name">bluestar.resident_permit</field>
+			<field name="name">Resident Permit</field>
 			<field name="res_model">bluestar.resident_permit</field>
 			<field name="view_mode">tree,form</field>
 		</record>

@@ -1,0 +1,117 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* bss_resident_permit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-17 14:39+0000\n"
+"PO-Revision-Date: 2013-07-17 14:39+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_n
+msgid "Authorization for asylum seekers"
+msgstr "Authorization for asylum seekers"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_ci
+msgid "Ci booklet"
+msgstr "Ci booklet"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_g
+msgid "Border authorization"
+msgstr "Border authorization"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_n
+msgid "N booklet"
+msgstr "N booklet"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_s
+msgid "Authorization for people to protect"
+msgstr "Authorization for people to protect"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_c
+msgid "Establishment authorization"
+msgstr "Establishment authorization"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_b
+msgid "B permit"
+msgstr "B permit"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_b
+msgid "Living authorization"
+msgstr "Living authorization"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_l
+msgid "Short-lived authorization"
+msgstr "Short-lived authorization"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_l
+msgid "L permit"
+msgstr "L permit"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_g
+msgid "G booklet"
+msgstr "G booklet"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_ci
+msgid "Living authorization (diplomat)"
+msgstr "Living authorization (diplomat)"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_f
+msgid "Authorization for temporarily admitted foreigners"
+msgstr "Authorization for temporarily admitted foreigners"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_c
+msgid "C permit"
+msgstr "C permit"
+
+#. module: bss_resident_permit
+#: model:ir.model,name:bss_resident_permit.model_bluestar_resident_permit
+msgid "Resident permit"
+msgstr "Resident permit"
+
+#. module: bss_resident_permit
+#: field:bluestar.resident_permit,name:0
+msgid "Name"
+msgstr "Nom"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_s
+msgid "S booklet"
+msgstr "S booklet"
+
+#. module: bss_resident_permit
+#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_f
+msgid "F booklet"
+msgstr "F booklet"
+
+#. module: bss_resident_permit
+#: model:ir.actions.act_window,name:bss_resident_permit.action_bluestar_resident_permit_form
+msgid "Resident Permit"
+msgstr "Resident Permit"
+
+#. module: bss_resident_permit
+#: field:bluestar.resident_permit,description:0
+msgid "Description"
+msgstr "Description"
+

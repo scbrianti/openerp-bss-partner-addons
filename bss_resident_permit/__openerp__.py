@@ -44,5 +44,6 @@ The list is initialized with Switzerland official resident permit values (which 
     'installable': True,
     'application': False,
     'auto_install': False,
+    'images' : ['images/resident_permit_tree.png',],
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

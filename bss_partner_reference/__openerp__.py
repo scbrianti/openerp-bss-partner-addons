@@ -28,7 +28,7 @@
 Automatic partner reference
 ===========================
 
-With this module, the partner reference field becomes mandatory, read-only and automatically fill at save from a customizable sequence.
+With this module, the partner reference field becomes mandatory, read-only and automatically filled at save from a customizable sequence.
 
 A configuration wizard can be used to reset all or empty reference from existing partners.
     """,

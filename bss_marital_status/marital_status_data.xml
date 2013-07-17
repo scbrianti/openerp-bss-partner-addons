@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-	<data noupdate="True">
+	<data>
 
 		<!-- Resource: bluestar.marital_status -->
 		<record id="bss_marital_status_married" model="bluestar.marital_status">
@@ -17,7 +17,7 @@
 		</record>
 		<record id="bss_marital_status_pacse" model="bluestar.marital_status">
 			<field name="domain">marital_status</field>
-			<field name="name">Pacsé (french)</field>
+			<field name="name">PACS (civil partnership)</field>
 		</record>
 		<record id="bss_marital_status_widower" model="bluestar.marital_status">
 			<field name="domain">marital_status</field>

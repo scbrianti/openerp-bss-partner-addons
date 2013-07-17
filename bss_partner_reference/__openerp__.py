@@ -24,7 +24,14 @@
     'version': 'master',
     "category" : 'Bluestar/Generic module',
     'complexity': "easy",
-    'description': """A module to make partner reference readonly, unique, and automatically created from a sequence.""",
+    'description': """
+Automatic partner reference
+===========================
+
+With this module, the partner reference field becomes mandatory, read-only and automatically fill at save from a customizable sequence.
+
+A configuration wizard can be used to reset all or empty reference from existing partners.
+    """,
     'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
     'depends': [],

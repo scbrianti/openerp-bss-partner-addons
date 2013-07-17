@@ -22,7 +22,7 @@ msgstr "Célibataire"
 
 #: model:bluestar.marital_status,name:bss_marital_status.bluestar_marital_status_pacse
 #. module: bss-marital-status
-msgid "Pacsé (french)"
+msgid "PACS (civil partnership)"
 msgstr "Pacsé"
 
 #: model:bluestar.marital_status,name:bss_marital_status.bluestar_marital_status_widower

@@ -24,7 +24,14 @@
     'version': 'master',
     "category" : 'Bluestar/Generic module',
     'complexity': "easy",
-    'description': """A list of Swiss resident permit""",
+    'description': """
+Manage resident permits
+=======================
+
+Add a manageable resident permit list which can be linked to an OpenERP object like partner. 
+
+The list is initialized with Switzerland official resident permit values (which will be moved in a l10n dedicated module in next release).   
+    """,
     'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
     'depends': [],

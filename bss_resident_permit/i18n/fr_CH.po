@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-17 14:29+0000\n"
-"PO-Revision-Date: 2013-07-17 14:29+0000\n"
+"POT-Creation-Date: 2013-07-17 14:39+0000\n"
+"PO-Revision-Date: 2013-07-17 14:39+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,103 +15,103 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_n
-#. module: bss_resident_permit
 msgid "Authorization for asylum seekers"
-msgstr "Autorisation pour requérants d'asile"
+msgstr "Authorization for asylum seekers"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_ci
-#. module: bss_resident_permit
 msgid "Ci booklet"
-msgstr "Livret Ci"
+msgstr "Ci booklet"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_g
-#. module: bss_resident_permit
 msgid "Border authorization"
-msgstr "Autorisation frontalière"
+msgstr "Border authorization"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_n
-#. module: bss_resident_permit
 msgid "N booklet"
-msgstr "Livret N"
+msgstr "N booklet"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_s
-#. module: bss_resident_permit
 msgid "Authorization for people to protect"
-msgstr "Autorisation pour les personnes à protéger"
+msgstr "Authorization for people to protect"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_c
-#. module: bss_resident_permit
 msgid "Establishment authorization"
-msgstr "Autorisation d'établissement"
+msgstr "Establishment authorization"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_b
-#. module: bss_resident_permit
 msgid "B permit"
-msgstr "Permis B"
+msgstr "B permit"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_b
-#. module: bss_resident_permit
 msgid "Living authorization"
-msgstr "Autorisation de séjour"
+msgstr "Living authorization"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_l
-#. module: bss_resident_permit
 msgid "Short-lived authorization"
-msgstr "Autorisation de courte durée"
+msgstr "Short-lived authorization"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_l
-#. module: bss_resident_permit
 msgid "L permit"
-msgstr "Permis L"
+msgstr "L permit"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_g
-#. module: bss_resident_permit
 msgid "G booklet"
-msgstr "Livret G"
+msgstr "G booklet"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_ci
-#. module: bss_resident_permit
 msgid "Living authorization (diplomat)"
-msgstr "Autorisation de séjour (diplomate)"
+msgstr "Living authorization (diplomat)"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_f
-#. module: bss_resident_permit
 msgid "Authorization for temporarily admitted foreigners"
-msgstr "Autorisation pour étrangers admis provisoirement"
+msgstr "Authorization for temporarily admitted foreigners"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_c
-#. module: bss_resident_permit
 msgid "C permit"
-msgstr "Permis C"
+msgstr "C permit"
 
-#: model:ir.actions.act_window,name:bss_resident_permit.action_bluestar_resident_permit_form
 #. module: bss_resident_permit
-msgid "bluestar.resident_permit"
-msgstr "bluestar.resident_permit"
+#: model:ir.model,name:bss_resident_permit.model_bluestar_resident_permit
+msgid "Resident permit"
+msgstr "Resident permit"
 
+#. module: bss_resident_permit
 #: field:bluestar.resident_permit,name:0
-#. module: bss_resident_permit
 msgid "Name"
 msgstr "Nom"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_s
-#. module: bss_resident_permit
 msgid "S booklet"
-msgstr "Livret S"
+msgstr "S booklet"
 
+#. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_f
-#. module: bss_resident_permit
 msgid "F booklet"
-msgstr "Livret F"
+msgstr "F booklet"
 
-#: model:ir.model,name:bss_resident_permit.model_bluestar_resident_permit
 #. module: bss_resident_permit
-msgid "Resident permit"
-msgstr "Permis de séjour"
+#: model:ir.actions.act_window,name:bss_resident_permit.action_bluestar_resident_permit_form
+msgid "Resident Permit"
+msgstr "Resident Permit"
 
+#. module: bss_resident_permit
 #: field:bluestar.resident_permit,description:0
-#. module: bss_resident_permit
 msgid "Description"
 msgstr "Description"
 

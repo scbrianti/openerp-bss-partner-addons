@@ -24,7 +24,19 @@
     'version': '7.0.2.0',
     "category" : 'Bluestar/Generic module',
     'complexity': "easy",
-    'description': """A list of marital status.""",
+    'description': """
+Manage marital status
+=====================
+
+Add a manageable marital status list which can be linked to an OpenERP object like partner. 
+
+The list is initialized with this standard values :
+* Married
+* Divorced
+* Single
+* PACS (civil partnership)
+* Widow, widower
+    """,
     'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
     'depends': [],

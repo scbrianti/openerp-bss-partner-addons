@@ -18,40 +18,40 @@ msgstr ""
 #. module: bss_marital_status
 #: model:ir.model,name:bss_marital_status.model_bluestar_marital_status
 msgid "Marital status"
-msgstr "État civil"
+msgstr ""
 
 #. module: bss_marital_status
 #: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_widower
 msgid "Widow, widower"
-msgstr "Veuve, veuf"
+msgstr ""
 
 #. module: bss_marital_status
 #: field:bluestar.marital_status,name:0
 msgid "Name"
-msgstr "Nom"
+msgstr ""
 
 #. module: bss_marital_status
 #: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_divorced
 msgid "Divorced"
-msgstr "Divorcé"
+msgstr ""
 
 #. module: bss_marital_status
 #: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_married
 msgid "Married"
-msgstr "Marrié"
+msgstr ""
 
 #. module: bss_marital_status
 #: model:ir.actions.act_window,name:bss_marital_status.action_bluestar_marital_status_form
 msgid "Marital Status"
-msgstr "État civil"
+msgstr ""
 
 #. module: bss_marital_status
 #: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_single
 msgid "Single"
-msgstr "Célibataire"
+msgstr ""
 
 #. module: bss_marital_status
 #: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_pacse
 msgid "PACS (civil partnership)"
-msgstr "Pacsé"
+msgstr ""
 

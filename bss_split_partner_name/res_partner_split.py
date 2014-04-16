@@ -29,7 +29,6 @@ class res_partner_split(osv.osv):
     # Because of default_focus attribute in views cannot be dynamic, we choose
     # first_name to store the company name. In this way first_name
     # is always visible and has always the default focus.
-
     def _get_full_name(self, cr, uid, ids, field_name, arg, context):
         result = {}
         for p in self.browse(cr, uid, ids, context):

@@ -59,9 +59,7 @@ class res_partner_split(osv.osv):
     }
 
     def _res_partner_split_install(self, cr, uid, ids=None, context=None):
-        """Fill the first_name field with name value at install.
-        OpenERP cannot set the not null constraint on res_partner
-        because the admin user is already in the table at this step."""
+        """Fill the first_name field with name value at install."""
         if ids is not None:
             raise NotImplementedError(
                     "Ids is just there by convention! Please don't use it.")

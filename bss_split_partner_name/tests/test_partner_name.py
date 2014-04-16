@@ -66,7 +66,7 @@ class test_partner_name(common.TransactionCase):
         self.assertEqual(jedi_order.name, 'The Jedi Order')
 
     def test_create_old_way(self):
-        """I test create a company (for compatibility)"""
+        """I test create a partner with name field (for compatibility)"""
         cr, uid = self.cr, self.uid
 
         # I create a new partner

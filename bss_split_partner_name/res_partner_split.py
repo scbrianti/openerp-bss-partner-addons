@@ -67,8 +67,6 @@ class res_partner_split(osv.osv):
                     "Ids is just there by convention! Please don't use it.")
 
         cr.execute(" update res_partner set first_name = name ")
-#         cr.execute(" alter table res_partner"
-#                    " alter column first_name set not null ")
         return  True
 
 res_partner_split()

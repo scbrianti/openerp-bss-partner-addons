@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_partner_split_simple_form" model="ir.ui.view">
+            <field name="name">res.partner.split.simplified.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_simple_form" />
+            <field name="arch" type="xml">
+                <field name="name" position="replace">
+                    <field name="first_name" default_focus="1" placeholder="First Name or Company Name" class="oe_inline" required="1" />
+                    <label string=" " attrs="{'invisible': [('is_company', '!=', False)]}" />
+                    <field name="last_name" placeholder="Last Name" class="oe_inline" 
+                            attrs="{'invisible': [('is_company', '!=', False)], 'required': [('is_company', '=', False)]}" />
+                </field>
+            </field>
+        </record>
+        
+        <record id="view_partner_split_form" model="ir.ui.view">
+            <field name="name">res.partner.split.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field eval="1" name="priority"/>
+            <field name="arch" type="xml">
+                <field name="name" position="replace">
+                    <field name="first_name" default_focus="1" placeholder="First Name or Company Name" class="oe_inline" required="1" />
+                    <label string=" " attrs="{'invisible': [('is_company', '!=', False)]}" />
+                    <field name="last_name" placeholder="Last Name" class="oe_inline" 
+                            attrs="{'invisible': [('is_company', '!=', False)], 'required': [('is_company', '=', False)]}" />
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

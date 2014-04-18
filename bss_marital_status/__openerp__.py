@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-#    
+#
 #    OpenERP, Open Source Management Solution
 #    Copyright (C) 2012-2013 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
@@ -15,20 +15,21 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.     
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
 
 {
     'name': 'Marital status',
     'version': 'master',
-    "category" : 'Bluestar/Generic module',
+    "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
 Manage marital status
 =====================
 
-Add a manageable marital status list which can be linked to an OpenERP object like partner. 
+Add a manageable marital status list which can be linked to an OpenERP
+object like partner.
 
 The list is initialized with this standard values :
 
@@ -43,14 +44,13 @@ The list is initialized with this standard values :
     'depends': [],
     'init_xml': ['marital_status_data.xml'],
     'update_xml': ['security/ir.model.access.csv',
-                   
                    'marital_status_view.xml'],
     'demo_xml': [],
     'test': [],
     'installable': True,
     'application': False,
     'auto_install': False,
-    'images' : ['images/marital_status_tree.png',],
+    'images': ['images/marital_status_tree.png', ],
 }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

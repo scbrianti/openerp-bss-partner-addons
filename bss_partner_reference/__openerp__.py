@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-#    
+#
 #    OpenERP, Open Source Management Solution
 #    Copyright (C) 2012-2013 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
@@ -15,22 +15,25 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.     
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
 
 {
     'name': 'Partner References',
     'version': 'master',
-    "category" : 'Bluestar/Generic module',
+    "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
 Automatic partner reference
 ===========================
 
-With this module, the partner reference field becomes mandatory, read-only and automatically filled at save from a customizable sequence.
+With this module, the partner reference field becomes mandatory,
+read-only and automatically filled at save from a customizable
+sequence.
 
-A configuration wizard can be used to reset all or empty reference from existing partners.
+A configuration wizard can be used to reset all or empty reference
+from existing partners.
     """,
     'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
@@ -42,7 +45,7 @@ A configuration wizard can be used to reset all or empty reference from existing
     'installable': True,
     'application': False,
     'auto_install': False,
-    'images' : ['images/customer_tree.png',],
+    'images': ['images/customer_tree.png', ],
 }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

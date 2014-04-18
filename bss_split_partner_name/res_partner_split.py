@@ -21,6 +21,7 @@
 
 from openerp.osv import osv, fields
 
+
 class res_partner_split(osv.osv):
 
     _inherit = 'res.partner'
@@ -61,9 +62,9 @@ class res_partner_split(osv.osv):
         """Fill the first_name field with name value at install."""
         if ids is not None:
             raise NotImplementedError(
-                    "Ids is just there by convention! Please don't use it.")
+                "Ids is just there by convention! Please don't use it.")
 
         cr.execute(" update res_partner set first_name = name ")
-        return  True
+        return True
 
 res_partner_split()

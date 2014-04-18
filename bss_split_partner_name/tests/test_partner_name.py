@@ -23,6 +23,7 @@ import unittest2
 import openerp.tests.common as common
 from openerp.netsvc import logging
 
+
 class test_partner_name(common.TransactionCase):
 
     @classmethod

@@ -24,4 +24,3 @@ import test_partner_name
 checks = [
     test_partner_name,
 ]
-

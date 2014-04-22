@@ -22,7 +22,7 @@
 {
     'name': 'Split Partner Name',
     'version': 'master',
-    "category" : 'Bluestar/Generic module',
+    "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
 Split Partner Name
@@ -43,7 +43,7 @@ Update standard views to use split name.
     'installable': True,
     'application': False,
     'auto_install': False,
-    'images' : [],
+    'images': [],
 }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

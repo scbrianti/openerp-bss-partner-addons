@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-#    
+#
 #    OpenERP, Open Source Management Solution
 #    Copyright (C) 2012-2013 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
@@ -15,11 +15,12 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.     
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
 
 from openerp.osv import osv, fields
+
 
 class bluestar_resident_permit(osv.osv):
 
@@ -28,7 +29,8 @@ class bluestar_resident_permit(osv.osv):
 
     _columns = {
         'name': fields.char('Name', size=20, required=True, translate=True),
-        'description': fields.char('Description', size=200, required=True, translate=True),
+        'description': fields.char('Description', size=200, required=True,
+                                   translate=True),
     }
 
     _defaults = {

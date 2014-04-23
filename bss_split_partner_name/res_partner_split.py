@@ -41,7 +41,6 @@ class res_partner_split(osv.osv):
                                      'first name or last name is defined')
             vals['first_name'] = vals['name']
         elif vals.get('first_name', False) or vals.get('last_name', False):
-            vals['name'] = '%s %s' % (vals['first_name'], vals['last_name'])
             if vals.get('is_company', False):
                 vals['name'] = vals.get('first_name', None)
             elif vals.get('last_name', False):

@@ -27,36 +27,57 @@ class res_partner_split(osv.osv):
     _inherit = 'res.partner'
     _description = "Partner with split name"
 
-    # Because of default_focus attribute in views cannot be dynamic, we choose
-    # first_name to store the company name. In this way first_name
-    # is always visible and has always the default focus.
-    def _get_full_name(self, cr, uid, ids, field_name, arg, context):
-        result = {}
-        for p in self.browse(cr, uid, ids, context):
-            if p.is_company:
-                result[p.id] = p.first_name
-            elif p.last_name:
-                result[p.id] = '%s %s' % (p.first_name, p.last_name)
-            else:
-                result[p.id] = p.first_name
-
-        return result
-
-    def _set_full_name(self, cr, uid, ids, name, value, arg, context=None):
-        if not value:
-            return False
-        self.write(cr, uid, ids, {'first_name': value}, context)
-        return True
-
     _columns = {
-        'name': fields.function(_get_full_name, fnct_inv=_set_full_name,
-                                type="char", multi=False,
-                                method=True, store=True, string='Name'),
         'first_name': fields.char('First Name', size=64, required=False,
                                   select=True),
         'last_name': fields.char('Last Name', size=64, required=False,
                                  select=True),
     }
+
+    def create(self, cr, uid, vals, context=None):
+        if vals.get('name', False):
+            if vals.get('first_name', False) or vals.get('last_name', False):
+                raise osv.except_osv('Error', 'name cannot be defined if '
+                                     'first name or last name is defined')
+            vals['first_name'] = vals['name']
+        elif vals.get('first_name', False) or vals.get('last_name', False):
+            vals['name'] = '%s %s' % (vals['first_name'], vals['last_name'])
+            if vals.get('is_company', False):
+                vals['name'] = vals.get('first_name', None)
+            elif vals.get('last_name', False):
+                vals['name'] = '%s %s' % (vals.get('first_name', None),
+                                          vals.get('last_name', None))
+            else:
+                vals['name'] = vals.get('first_name', None)
+
+        return super(res_partner_split, self).create(cr, uid, vals,
+                                                     context=context)
+
+    def write(self, cr, uid, ids, vals, context=None):
+        if vals.get('name', False):
+            if vals.get('first_name', False) or vals.get('last_name', False):
+                raise osv.except_osv('Error', 'name cannot be defined if '
+                                     'first name or last name is defined')
+            vals['first_name'] = vals['name']
+            return super(res_partner_split, self).write(cr, uid, ids, vals,
+                                                        context=context)
+        elif vals.get('first_name', False) or vals.get('last_name', False):
+            super(res_partner_split, self).write(cr, uid, ids, vals,
+                                                 context=context)
+            for p in self.browse(cr, uid, ids, context=context):
+                n_vals = {}
+                if p.is_company:
+                    n_vals['name'] = p.first_name
+                elif p.last_name:
+                    n_vals['name'] = '%s %s' % (p.first_name, p.last_name)
+                else:
+                    n_vals['name'] = p.first_name
+                super(res_partner_split, self).write(cr, uid, ids, n_vals,
+                                                     context=context)
+            return True
+        else:
+            return super(res_partner_split, self).write(cr, uid, ids, vals,
+                                                        context=context)
 
     def _res_partner_split_install(self, cr, uid, ids=None, context=None):
         """Fill the first_name field with name value at install."""

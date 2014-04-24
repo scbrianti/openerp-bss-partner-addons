@@ -8,8 +8,8 @@
             <field name="inherit_id" ref="base.view_partner_simple_form" />
             <field name="arch" type="xml">
                 <xpath expr="//label[@for='name']" position="replace">
-                    <label for="first_name" String="First Name / Last Name" attrs="{'invisible': [('is_company', '!=', False)]}"/>
-                    <label for="first_name" String="Name" attrs="{'invisible': [('is_company', '=', False)]}" /> (
+                    <label for="first_name" string="First Name / Last Name" attrs="{'invisible': [('is_company', '!=', False)]}"/>
+                    <label for="first_name" string="Name" attrs="{'invisible': [('is_company', '=', False)]}" /> (
                 </xpath>
                 <field name="name" position="replace">
                     <field name="first_name" default_focus="1" class="oe_inline" required="1" />
@@ -27,8 +27,8 @@
             <field eval="1" name="priority"/>
             <field name="arch" type="xml">
                 <xpath expr="//label[@for='name']" position="replace">
-                    <label for="first_name" String="First Name / Last Name" attrs="{'invisible': [('is_company', '!=', False)]}"/>
-                    <label for="first_name" String="Name" attrs="{'invisible': [('is_company', '=', False)]}" /> (
+                    <label for="first_name" string="First Name / Last Name" attrs="{'invisible': [('is_company', '!=', False)]}"/>
+                    <label for="first_name" string="Name" attrs="{'invisible': [('is_company', '=', False)]}" /> (
                 </xpath>
                 <field name="name" position="replace">
                     <field name="first_name" default_focus="1" class="oe_inline" required="1" />
@@ -37,7 +37,7 @@
                             attrs="{'invisible': [('is_company', '!=', False)], 'required': [('is_company', '=', False)]}" />
                 </field>
                 <xpath expr="//form[@string='Contact']//label[@for='name']" position="replace">
-                    <label for="first_name" String="First Name / Last Name" class="oe_edit_only" />
+                    <label for="first_name" string="First Name / Last Name" class="oe_edit_only" />
                 </xpath>
                 <xpath expr="//form[@string='Contact']//field[@name='name']" position="replace">
                     <field name="first_name" default_focus="1" placeholder="First Name" class="oe_inline" required="1" />

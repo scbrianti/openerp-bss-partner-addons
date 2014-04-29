@@ -21,6 +21,7 @@
 
 from openerp.osv import osv, fields
 
+
 class bss_partner_qualifier(osv.osv):
 
     _name = 'bss.partner.qualifier'
@@ -31,6 +32,7 @@ class bss_partner_qualifier(osv.osv):
 
 bss_partner_qualifier()
 
+
 class bss_partner_qualified_contact_rel(osv.osv):
 
     _name = 'bss.partner.qualified_contact.rel'
@@ -38,16 +40,16 @@ class bss_partner_qualified_contact_rel(osv.osv):
     _columns = {
         'parent_id': fields.many2one('res.partner', 'Parent'),
         'contact_id': fields.many2one('res.partner', 'Contact'),
-        'qualifier': fields.many2one('bss.partner.qualifier', 'Qualifier')
+        'qualifier_id': fields.many2one('bss.partner.qualifier', 'Qualifier')
     }
 
     def open_contact(self, cr, uid, ids, context=None):
         res_id = self.browse(cr, uid, ids[0], context).contact_id.id
         return {
-                'type': 'ir.actions.act_window',
-                'res_model': 'res.partner',
-                'res_id': res_id,
-                'view_mode': 'form',
+            'type': 'ir.actions.act_window',
+            'res_model': 'res.partner',
+            'res_id': res_id,
+            'view_mode': 'form',
         }
 
 bss_partner_qualified_contact_rel()

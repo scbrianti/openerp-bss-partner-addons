@@ -80,27 +80,27 @@ class bss_partner_multi_phone(osv.osv):
                                     field_name, arg, context)
 
     def _set_phone(self, cr, uid, ids, name, value, arg, context=None):
-        return self._set_comm_field(cr, uid, ids,
+        return self._set_phone_field(cr, uid, ids,
                                     self._get_category_id(cr, uid, 'phone'),
                                     name, value, context)
 
     def _get_fax(self, cr, uid, ids, field_name, arg, context=None):
-        return self._get_comm_field(cr, uid, ids,
+        return self._get_phone_field(cr, uid, ids,
                                     self._get_category_id(cr, uid, 'fax'),
                                     field_name, arg, context)
 
     def _set_fax(self, cr, uid, ids, name, value, arg, context=None):
-        return self._set_comm_field(cr, uid, ids,
+        return self._set_phone_field(cr, uid, ids,
                                     self._get_category_id(cr, uid, 'fax'),
                                     name, value, context)
 
     def _get_mobile(self, cr, uid, ids, field_name, arg, context=None):
-        return self._get_comm_field(cr, uid, ids,
+        return self._get_phone_field(cr, uid, ids,
                                     self._get_category_id(cr, uid, 'mobile'),
                                     field_name, arg, context)
 
     def _set_mobile(self, cr, uid, ids, name, value, arg, context=None):
-        return self._set_comm_field(cr, uid, ids,
+        return self._set_phone_field(cr, uid, ids,
                                     self._get_category_id(cr, uid, 'mobile'),
                                     name, value, context)
 

@@ -16,7 +16,7 @@
                         <field name="qualified_contact_rel_ids" widget="one2many">
                             <tree editable="bottom">
                                 <field name="contact_id" />
-                                <field name="qualifier" />
+                                <field name="qualifier_id" />
                                 <button name="open_contact" string="Open"
                                     icon="gtk-jump-to" type="object"/>
                             </tree>

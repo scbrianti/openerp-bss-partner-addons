@@ -72,3 +72,4 @@ msgstr "Structure"
 #: field:bss.partner.qualified_contact.rel,qualifier_id:0
 msgid "Qualifier"
 msgstr "Qualifiant"
+

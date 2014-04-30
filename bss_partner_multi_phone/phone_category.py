@@ -36,4 +36,23 @@ class communication_mode_category(osv.osv):
         'required': False,
     }
 
+    def _get_category_id(self, cr, uid, xml_sub_name):
+        """Return the category id from the sub name of an xml id"""
+
+        m = self.pool.get('ir.model.data')
+        return m.get_object(
+            cr, uid,
+            'bss_partner_multi_phone',
+            'phone_category_%s' % xml_sub_name
+        ).id
+
+    def get_category_phone_id(self, cr, uid):
+        return self._get_category_id(cr, uid, 'phone')
+
+    def get_category_fax_id(self, cr, uid):
+        return self._get_category_id(cr, uid, 'fax')
+
+    def get_category_mobile_id(self, cr, uid):
+        return self._get_category_id(cr, uid, 'mobile')
+
 communication_mode_category()

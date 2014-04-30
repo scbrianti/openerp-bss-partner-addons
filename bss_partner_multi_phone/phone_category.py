@@ -29,11 +29,30 @@ class communication_mode_category(osv.osv):
 
     _columns = {
         'name': fields.char('Name', size=32, translate=True, required=True),
-        'required': fields.boolean('Required'),
+        'required': fields.boolean('Required', readonly=True),
     }
 
     _defaults = {
         'required': False,
     }
+
+    def _get_category_id(self, cr, uid, xml_sub_name):
+        """Return the category id from the sub name of an xml id"""
+
+        m = self.pool.get('ir.model.data')
+        return m.get_object(
+            cr, uid,
+            'bss_partner_multi_phone',
+            'phone_category_%s' % xml_sub_name
+        ).id
+
+    def get_category_phone_id(self, cr, uid):
+        return self._get_category_id(cr, uid, 'phone')
+
+    def get_category_fax_id(self, cr, uid):
+        return self._get_category_id(cr, uid, 'fax')
+
+    def get_category_mobile_id(self, cr, uid):
+        return self._get_category_id(cr, uid, 'mobile')
 
 communication_mode_category()

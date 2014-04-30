@@ -19,38 +19,8 @@
 #
 ##############################################################################
 
-{
-    'name': 'Partner Multiple Phone Numbers',
-    'version': 'master',
-    "category": 'Bluestar/Generic module',
-    'complexity': "easy",
-    'description': """
-Partner multiple phone numbers
-==============================
+import test_partner_multi_phone
 
-With this module, the parter has a dynamic list of phone numbers, with a
-category.
-
-All existing base field (phone, mobile, fax) are synchronized with
-automatically created category in both directions.
-
-A system administrator can add custom category.
-    """,
-    'author': u'Bluestar Solutions Sàrl',
-    'website': 'http://www.blues2.ch',
-    'depends': ['bss_phonenumbers'],
-    'data': ['security/ir.model.access.csv',
-             'security/ir_rule.xml',
-
-             'phone_category_data.xml',
-
-             'phone_category_view.xml',
-             'partner_view.xml', ],
-    'demo': [],
-    'installable': True,
-    'application': False,
-    'auto_install': False,
-    'images': [],
-}
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+checks = [
+    test_partner_multi_phone,
+]

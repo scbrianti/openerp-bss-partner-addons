@@ -6,15 +6,15 @@
             <field name="name">res.partner.multi_phone.form</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form" />
-            <field eval="1" name="priority"/>
+            <field name="priority" eval="8" />
             <field name="arch" type="xml">
                 <field name="phone" position="replace">
                     <group string="Phones" colspan="2">
                     <field name="phone_ids" nolabel="1">
                         <tree editable="bottom">
                             <field name="sequence" widget="handle"/>
-                            <field name="category_id" />
-                            <field name="number" />
+                            <field name="category_id" widget="many2one" />
+                            <field name="number" widget="char" />
                         </tree>
                     </field>
                     </group>

@@ -36,6 +36,7 @@ class bss_partner_multi_phone(osv.osv):
                 if phone.category_id.id == cat_id:
                     result[partner.id] = phone.number
                     break
+
         return result
 
     def _set_phone_field(self, cr, uid, ids, cat_id,
@@ -64,57 +65,81 @@ class bss_partner_multi_phone(osv.osv):
                 }, context)
         return True
 
-    def _get_category_id(self, cr, uid, xml_sub_name):
-        """Return the category id from the sub name of an xml id"""
-
-        m = self.pool.get('ir.model.data')
-        return m.get_object(
-            cr, uid,
-            'bss_partner_multi_phone',
-            'phone_category_%s' % xml_sub_name
-        ).id
-
     def _get_phone(self, cr, uid, ids, field_name, arg, context=None):
-        return self._get_comm_field(cr, uid, ids,
-                                    self._get_category_id(cr, uid, 'phone'),
-                                    field_name, arg, context)
+        cat_obj = self.pool.get('bss.phone.category')
+        return self._get_phone_field(cr, uid, ids,
+                                     cat_obj.get_category_phone_id(cr, uid),
+                                     field_name, arg, context)
 
     def _set_phone(self, cr, uid, ids, name, value, arg, context=None):
-        return self._set_comm_field(cr, uid, ids,
-                                    self._get_category_id(cr, uid, 'phone'),
-                                    name, value, context)
+        cat_obj = self.pool.get('bss.phone.category')
+        return self._set_phone_field(cr, uid, ids,
+                                     cat_obj.get_category_phone_id(cr, uid),
+                                     name, value, context)
 
     def _get_fax(self, cr, uid, ids, field_name, arg, context=None):
-        return self._get_comm_field(cr, uid, ids,
-                                    self._get_category_id(cr, uid, 'fax'),
-                                    field_name, arg, context)
+        cat_obj = self.pool.get('bss.phone.category')
+        return self._get_phone_field(cr, uid, ids,
+                                     cat_obj.get_category_fax_id(cr, uid),
+                                     field_name, arg, context)
 
     def _set_fax(self, cr, uid, ids, name, value, arg, context=None):
-        return self._set_comm_field(cr, uid, ids,
-                                    self._get_category_id(cr, uid, 'fax'),
-                                    name, value, context)
+        cat_obj = self.pool.get('bss.phone.category')
+        return self._set_phone_field(cr, uid, ids,
+                                     cat_obj.get_category_fax_id(cr, uid),
+                                     name, value, context)
 
     def _get_mobile(self, cr, uid, ids, field_name, arg, context=None):
-        return self._get_comm_field(cr, uid, ids,
-                                    self._get_category_id(cr, uid, 'mobile'),
-                                    field_name, arg, context)
+        cat_obj = self.pool.get('bss.phone.category')
+        return self._get_phone_field(cr, uid, ids,
+                                     cat_obj.get_category_mobile_id(cr, uid),
+                                     field_name, arg, context)
 
     def _set_mobile(self, cr, uid, ids, name, value, arg, context=None):
-        return self._set_comm_field(cr, uid, ids,
-                                    self._get_category_id(cr, uid, 'mobile'),
-                                    name, value, context)
+        cat_obj = self.pool.get('bss.phone.category')
+        return self._set_phone_field(cr, uid, ids,
+                                     cat_obj.get_category_mobile_id(cr, uid),
+                                     name, value, context)
+
+    def _get_partner_ids_by_phone_ids(self, cr, uid, ids, context=None):
+        partner_ids = set()
+        for phone in self.browse(cr, uid, ids, context):
+            partner_ids.add(phone.partner_id.id)
+
+        return list(partner_ids)
 
     _columns = {
         'phone_ids': fields.one2many(
             'bss.partner.phone', 'partner_id', 'Phones', reorderable=True
         ),
 
-        'phone': fields.function(_get_phone, fnct_inv=_set_phone,
-                                 type='char', store=True, multi=False),
-        'fax': fields.function(_get_fax, fnct_inv=_set_fax,
-                               type='char', store=True, multi=False),
-        'mobile': fields.function(_get_mobile, fnct_inv=_set_mobile,
-                                  type='char', store=True, multi=False),
+        'phone': fields.function(
+            _get_phone, fnct_inv=_set_phone,
+            type='char', store={
+                'bss.partner.phone': (
+                    _get_partner_ids_by_phone_ids,
+                    ['number', 'category_id', 'partner_id', 'sequence'], 10
+                ),
+            }, multi=False, string="Phone"
+        ),
+        'fax': fields.function(
+            _get_fax, fnct_inv=_set_fax,
+            type='char', store={
+                'bss.partner.phone': (
+                    _get_partner_ids_by_phone_ids,
+                    ['number', 'category_id', 'partner_id', 'sequence'], 10
+                ),
+            }, multi=False, string="Fax"
+        ),
+        'mobile': fields.function(
+            _get_mobile, fnct_inv=_set_mobile,
+            type='char', store={
+                'bss.partner.phone': (
+                    _get_partner_ids_by_phone_ids,
+                    ['number', 'category_id', 'partner_id', 'sequence'], 10
+                ),
+            }, multi=False, string="Mobile"
+        ),
     }
 
 bss_partner_multi_phone()

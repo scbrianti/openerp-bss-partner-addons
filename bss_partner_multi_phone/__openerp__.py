@@ -40,7 +40,11 @@ A system administrator can add custom category.
     'website': 'http://www.blues2.ch',
     'depends': ['bss_phonenumbers'],
     'data': ['security/ir.model.access.csv',
+             'security/ir_rule.xml',
+
              'phone_category_data.xml',
+
+             'phone_category_view.xml',
              'partner_view.xml', ],
     'demo': [],
     'installable': True,

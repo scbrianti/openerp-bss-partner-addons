@@ -29,7 +29,7 @@ class communication_mode_category(osv.osv):
 
     _columns = {
         'name': fields.char('Name', size=32, translate=True, required=True),
-        'required': fields.boolean('Required'),
+        'required': fields.boolean('Required', readonly=True),
     }
 
     _defaults = {

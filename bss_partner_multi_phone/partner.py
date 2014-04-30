@@ -120,7 +120,7 @@ class bss_partner_multi_phone(osv.osv):
                     _get_partner_ids_by_phone_ids,
                     ['number', 'category_id', 'partner_id', 'sequence'], 10
                 ),
-            }, multi=False
+            }, multi=False, string="Phone"
         ),
         'fax': fields.function(
             _get_fax, fnct_inv=_set_fax,
@@ -129,7 +129,7 @@ class bss_partner_multi_phone(osv.osv):
                     _get_partner_ids_by_phone_ids,
                     ['number', 'category_id', 'partner_id', 'sequence'], 10
                 ),
-            }, multi=False
+            }, multi=False, string="Fax"
         ),
         'mobile': fields.function(
             _get_mobile, fnct_inv=_set_mobile,
@@ -138,7 +138,7 @@ class bss_partner_multi_phone(osv.osv):
                     _get_partner_ids_by_phone_ids,
                     ['number', 'category_id', 'partner_id', 'sequence'], 10
                 ),
-            }, multi=False
+            }, multi=False, string="Mobile"
         ),
     }
 

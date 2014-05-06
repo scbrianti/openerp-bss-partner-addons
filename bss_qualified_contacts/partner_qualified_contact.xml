@@ -17,6 +17,8 @@
                             <tree editable="bottom">
                                 <field name="contact_id" />
                                 <field name="qualifier_id" />
+                                <field name="phone" />
+                                <field name="mobile" />
                                 <button name="open_contact" string="Open"
                                     icon="gtk-jump-to" type="object"/>
                             </tree>

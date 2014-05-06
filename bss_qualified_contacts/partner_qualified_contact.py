@@ -40,7 +40,11 @@ class bss_partner_qualified_contact_rel(osv.osv):
     _columns = {
         'parent_id': fields.many2one('res.partner', 'Parent'),
         'contact_id': fields.many2one('res.partner', 'Contact'),
-        'qualifier_id': fields.many2one('bss.partner.qualifier', 'Qualifier')
+        'qualifier_id': fields.many2one('bss.partner.qualifier', 'Qualifier'),
+        'phone': fields.related('contact_id', 'phone', type="char",
+                                readonly=True, string="Phone", store=False),
+        'mobile': fields.related('contact_id', 'mobile', type="char",
+                                readonly=True, string="Mobile", store=False),
     }
 
     def open_contact(self, cr, uid, ids, context=None):

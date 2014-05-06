@@ -44,9 +44,10 @@ class test_partner_qualified_contact(common.TransactionCase):
             'name': 'Luke Skywalker',
         })
         self.luke = self.partner.browse(cr, uid, luke_id)
-        # I create partners
         ben_id = self.partner.create(cr, uid, {
             'name': 'Obi-Wan Kenobi',
+            'phone': '+1 5550110',
+            'mobile': '+1 5550115',
         })
         self.ben = self.partner.browse(cr, uid, ben_id)
 
@@ -90,6 +91,14 @@ class test_partner_qualified_contact(common.TransactionCase):
         self.assertEqual(
             self.luke.qualified_contact_rel_ids[0].qualifier_id.name,
             'Jedi Master'
+        )
+        self.assertEqual(
+            self.luke.qualified_contact_rel_ids[0].phone,
+            '+1 5550110'
+        )
+        self.assertEqual(
+            self.luke.qualified_contact_rel_ids[0].mobile,
+            '+1 5550115'
         )
         self.assertEqual(self.luke.qualified_contact_ids[0].name,
                          'Obi-Wan Kenobi')

@@ -44,7 +44,7 @@ class bss_partner_qualified_contact_rel(osv.osv):
         'phone': fields.related('contact_id', 'phone', type="char",
                                 readonly=True, string="Phone", store=False),
         'mobile': fields.related('contact_id', 'mobile', type="char",
-                                readonly=True, string="Mobile", store=False),
+                                 readonly=True, string="Mobile", store=False),
     }
 
     def open_contact(self, cr, uid, ids, context=None):

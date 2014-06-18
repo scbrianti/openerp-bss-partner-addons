@@ -45,9 +45,9 @@ class bss_partner_phone(osv.osv):
         'sequence': 10,
     }
 
-    def _check_unique_if_required(self, cr, uid, ids, context=None):
+    def _check_unique(self, cr, uid, ids, context=None):
         for phone in self.browse(cr, uid, ids, context=context):
-            if phone.category_id.required:
+            if phone.category_id.unique:
                 cond = [('id', '!=', phone.id),
                         ('partner_id', '=', phone.partner_id.id),
                         ('category_id', '=', phone.category_id.id)]
@@ -55,7 +55,7 @@ class bss_partner_phone(osv.osv):
                     return False
             return True
 
-    _constraints = [(_check_unique_if_required, 'A required category cannot '
+    _constraints = [(_check_unique, 'A unique category cannot '
                      'be used multiple times on a partner', ['category_id'])]
 
 

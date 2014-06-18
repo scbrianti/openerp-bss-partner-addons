@@ -28,14 +28,25 @@ class bss_partner_multi_phone(osv.osv):
 
     def _get_phone_field(self, cr, uid, ids, cat_id,
                          field_name, arg, context=None):
+        phone_obj = self.pool.get('bss.partner.phone')
         result = {}
         if isinstance(ids, (int, long)):
             ids = [ids]
-        for partner in self.browse(cr, uid, ids, context):
-            for phone in partner.phone_ids:
-                if phone.category_id.id == cat_id:
-                    result[partner.id] = phone.number
-                    break
+
+        # Take the first phone number by sequence for the category if exists:
+        phone_ids = phone_obj.search(
+            cr, uid, [('partner_id', 'in', ids),
+                      ('category_id', '=', cat_id)],
+            order='partner_id asc, sequence asc',
+            context=context
+        )
+        for phone in phone_obj.browse(cr, uid, phone_ids, context):
+            if phone.partner_id.id not in result.keys():
+                result[phone.partner_id.id] = phone.number
+
+        # Fill with None if the phone does not exists:
+        for partner_id in list(set(ids) - set(result.keys())):
+            result[partner_id] = None
 
         return result
 
@@ -49,20 +60,23 @@ class bss_partner_multi_phone(osv.osv):
         if isinstance(ids, (int, long)):
             ids = [ids]
 
-        for partner in self.browse(cr, uid, ids, context):
-            update_mode = False
-            for phone in partner.phone_ids:
-                if phone.category_id.id == cat_id:
-                    phone_obj.write(cr, uid, phone.id, {'number': value},
-                                    context)
-                    update_mode = True
-                    break
-            if not update_mode:
+        for partner_id in ids:
+            phone_ids = phone_obj.search(
+                cr, uid, [('partner_id', '=', partner_id),
+                          ('category_id', '=', cat_id)],
+                order='partner_id asc, sequence asc',
+                context=context
+            )
+            if phone_ids:
+                phone_obj.write(cr, uid, phone_ids[0], {'number': value},
+                                context)
+            else:
                 phone_obj.create(cr, uid, {
                     'category_id': cat_id,
                     'number': value,
-                    'partner_id': partner.id,
+                    'partner_id': partner_id,
                 }, context)
+
         return True
 
     def _get_phone(self, cr, uid, ids, field_name, arg, context=None):

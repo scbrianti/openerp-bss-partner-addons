@@ -32,6 +32,12 @@ class test_partner_multi_phone(common.TransactionCase):
         self.partner = self.registry('res.partner')
         self.phone = self.registry('bss.partner.phone')
         self.category = self.registry('bss.phone.category')
+        self.phone_category_id = lambda self, cr, uid: \
+            self.category.get_category_phone_id(cr, uid)
+        self.fax_category_id = lambda self, cr, uid: \
+            self.category.get_category_fax_id(cr, uid)
+        self.mobile_category_id = lambda self, cr, uid: \
+            self.category.get_category_mobile_id(cr, uid)
         self._logger = logging.getLogger(__name__)
 
     def setUp(self):
@@ -60,7 +66,7 @@ class test_partner_multi_phone(common.TransactionCase):
 
         self.phone.create(cr, uid, {
             'number': '+1 5550110',
-            'category_id': self.category.get_category_phone_id(cr, uid),
+            'category_id': self.phone_category_id(cr, uid),
             'partner_id': self.luke.id,
             'sequence': 10,
         })
@@ -77,7 +83,7 @@ class test_partner_multi_phone(common.TransactionCase):
             'sequence': 15,
         })
 
-        # I retrieve updated partners
+        # Update luke
         self.luke = self.partner.browse(cr, uid, self.luke.id)
 
         # I check partners values
@@ -107,27 +113,35 @@ class test_partner_multi_phone(common.TransactionCase):
         cr, uid = self.cr, self.uid
 
         values = {
-            self.category.get_category_phone_id(cr, uid): '+1 5550121',
-            self.category.get_category_fax_id(cr, uid): '+1 5550122',
-            self.category.get_category_mobile_id(cr, uid): '+1 5550123',
+            self.phone_category_id(cr, uid): ['+1 5550121', '+1 5550131'],
+            self.fax_category_id(cr, uid): ['+1 5550122', '+1 5550132'],
+            self.mobile_category_id(cr, uid): ['+1 5550123', '+1 5550133'],
         }
 
-        self.partner.write(cr, uid, self.luke.id, {
-            'phone': values[self.category.get_category_phone_id(cr, uid)],
-            'fax': values[self.category.get_category_fax_id(cr, uid)],
-            'mobile': values[self.category.get_category_mobile_id(cr, uid)],
-        })
+        # Execute test 2 times to test create and write:
+        for t in [0, 1]:
+            self.partner.write(cr, uid, self.luke.id, {
+                'phone': values[self.phone_category_id(cr, uid)][t],
+                'fax': values[self.fax_category_id(cr, uid)][t],
+                'mobile': values[self.mobile_category_id(cr, uid)][t],
+            })
 
-        # I check partners values
-        for i in range(3):
-            self.assertEqual(self.luke.phone_ids[i].number,
-                             values[self.luke.phone_ids[i].category_id.id])
-        self.assertEqual(self.luke.phone,
-                         values[self.category.get_category_phone_id(cr, uid)])
-        self.assertEqual(self.luke.fax,
-                         values[self.category.get_category_fax_id(cr, uid)])
-        self.assertEqual(self.luke.mobile,
-                         values[self.category.get_category_mobile_id(cr, uid)])
+            # Update luke
+            self.luke = self.partner.browse(cr, uid, self.luke.id)
+
+            # I check partners values
+            self.assertEqual(len(self.luke.phone_ids), 3)
+            for i in range(len(self.luke.phone_ids)):
+                self.assertEqual(
+                    self.luke.phone_ids[i].number,
+                    values[self.luke.phone_ids[i].category_id.id][t]
+                )
+            self.assertEqual(self.luke.phone,
+                             values[self.phone_category_id(cr, uid)][t])
+            self.assertEqual(self.luke.fax,
+                             values[self.fax_category_id(cr, uid)][t])
+            self.assertEqual(self.luke.mobile,
+                             values[self.mobile_category_id(cr, uid)][t])
 
 if __name__ == '__main__':
     unittest2.main()

@@ -30,10 +30,12 @@ class communication_mode_category(osv.osv):
     _columns = {
         'name': fields.char('Name', size=32, translate=True, required=True),
         'required': fields.boolean('Required', readonly=True),
+        'unique': fields.boolean('Unique', readonly=True),
     }
 
     _defaults = {
         'required': False,
+        'unique': False,
     }
 
     def _get_category_id(self, cr, uid, xml_sub_name):

@@ -7,13 +7,16 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-05 07:58+0000\n"
-"PO-Revision-Date: 2013-09-05 07:58+0000\n"
-"Last-Translator: <>\n"
+"PO-Revision-Date: 2014-07-03 13:43+0200\n"
+"Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
 "Language-Team: \n"
+"Language: fr_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Pootle 2.5.0\n"
+"X-POOTLE-MTIME: 1404387831.0\n"
 
 #. module: bss_marital_status
 #: model:ir.model,name:bss_marital_status.model_bluestar_marital_status
@@ -38,7 +41,7 @@ msgstr "Divorcé"
 #. module: bss_marital_status
 #: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_married
 msgid "Married"
-msgstr "Marrié"
+msgstr "Marié"
 
 #. module: bss_marital_status
 #: model:ir.actions.act_window,name:bss_marital_status.action_bluestar_marital_status_form
@@ -54,4 +57,3 @@ msgstr "Célibataire"
 #: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_pacse
 msgid "PACS (civil partnership)"
 msgstr "Pacsé"
-

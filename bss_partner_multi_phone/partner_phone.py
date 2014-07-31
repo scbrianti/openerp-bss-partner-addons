@@ -31,8 +31,8 @@ class bss_partner_phone(osv.osv):
     _rec_name = 'number'
 
     _columns = {
-        'number': pnfields.phonenumber('Number'),
-        'category_id': fields.many2one('bss.phone.category', 'Category'),
+        'number': pnfields.phonenumber('Number', required=True),
+        'category_id': fields.many2one('bss.phone.category', 'Category', required=True),
         'partner_id': fields.many2one('res.partner', 'Partner'),
         'sequence': fields.integer('Sequence', help='Gives the sequence'
                                    'order when displaying a list of phone'
@@ -44,6 +44,10 @@ class bss_partner_phone(osv.osv):
     _defaults = {
         'sequence': 10,
     }
+    
+    def number_change(self, cr, uid, ids, number, context):
+        print("over here")
+        return {'value': {}}
 
     def _check_unique(self, cr, uid, ids, context=None):
         for phone in self.browse(cr, uid, ids, context=context):

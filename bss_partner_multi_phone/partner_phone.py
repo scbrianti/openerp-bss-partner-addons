@@ -44,10 +44,6 @@ class bss_partner_phone(osv.osv):
     _defaults = {
         'sequence': 10,
     }
-    
-    def number_change(self, cr, uid, ids, number, context):
-        print("over here")
-        return {'value': {}}
 
     def _check_unique(self, cr, uid, ids, context=None):
         for phone in self.browse(cr, uid, ids, context=context):

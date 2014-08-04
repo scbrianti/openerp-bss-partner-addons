@@ -43,7 +43,7 @@ class bluestar_partner_reference(osv.osv):
     }
 
     def create(self, cr, uid, vals, context=None):
-        if not 'ref' in vals:
+        if 'ref' not in vals:
             vals['ref'] = self.pool.get('ir.sequence'
                                         ).get(cr, uid, 'bluestar.partner.ref')
         return super(bluestar_partner_reference,

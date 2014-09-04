@@ -28,6 +28,11 @@ class bss_partner_qualifier(osv.osv):
 
     _columns = {
         'name': fields.char('Name', size=64, translate=True, required=True),
+        'protected': fields.boolean('Protected'),
+    }
+
+    _defaults = {
+        'protected': False,
     }
 
 bss_partner_qualifier()

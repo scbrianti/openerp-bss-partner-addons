@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+        <record id="bss_partner_qualifier_protected" model="ir.rule">
+            <field name="name">bss.partner.qualifier.protected.rule</field>
+            <field name="model_id" model="ir.model" ref="model_bss_partner_qualifier" />
+            <field name="global" eval="True" />
+            <field name="domain_force">[('protected', '=', False)]</field>
+            <field name="perm_read" eval="False" />
+            <field name="perm_create" eval="False" />
+            <field name="perm_write" eval="True" />
+            <field name="perm_unlink" eval="True" />
+        </record>
+        
+    </data>
+</openerp>

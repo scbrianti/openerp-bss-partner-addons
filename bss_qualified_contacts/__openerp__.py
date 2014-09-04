@@ -38,6 +38,8 @@ Rename "Contacts" tab in the partner form "Structure" and add a tab named
     'website': 'http://www.blues2.ch',
     'depends': [],
     'data': ['security/ir.model.access.csv',
+             'security/ir_rule.xml',
+
              'partner_qualified_contact.xml', ],
     'demo': [],
     'test': [],

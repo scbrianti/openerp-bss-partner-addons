@@ -47,5 +47,21 @@
             </field>
         </record>
 
+	<record id="view_user_split_form" model="ir.ui.view">
+		<field name="name">res.users.split.form</field>
+		<field name="model">res.users</field>
+		<field name="inherit_id" ref="base.view_users_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//label[@for='name']" position="replace">
+				<label for="first_name" string="First Name / Last Name" class="oe_edit_only" />
+			</xpath>
+			<field name="name" position="replace">
+				<field name="first_name" default_focus="1" class="oe_inline" required="1" />
+				<label string=" " />
+				<field name="last_name" class="oe_inline" required="1" />
+			</field>
+		</field>
+	</record>
+
     </data>
 </openerp>

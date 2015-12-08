@@ -21,7 +21,7 @@
 
 {
     'name': 'Qualified Contacts',
-    'version': '7.0.2.1-20150409',
+    'version': '7.0.2.2-20151105',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """

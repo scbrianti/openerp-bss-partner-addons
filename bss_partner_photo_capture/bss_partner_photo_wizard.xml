@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_bss_partner_photo_wizard">
+            <field name="name">bss.partmer.photo.wizard.view</field>
+            <field name="model">bss.partmer.photo.wizard</field>
+            <field name="arch" type="xml">
+                <form string="TEST">
+                    <field name="camera" nolabel="1" widget="bss_camera"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_bss_partner_photo_wizard">
+            <field name="name">Partner Photo Wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bss.partmer.photo.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_bss_partner_photo_wizard" />
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</openerp>

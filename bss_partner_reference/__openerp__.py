@@ -21,7 +21,7 @@
 
 {
     'name': 'Partner References',
-    'version': '7.0.2.2-20151105',
+    'version': '7.0.2.2-20160427',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """

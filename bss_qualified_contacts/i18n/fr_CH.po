@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-06 07:53+0000\n"
-"PO-Revision-Date: 2014-05-06 09:54+0200\n"
+"POT-Creation-Date: 2016-04-26 09:57+0000\n"
+"PO-Revision-Date: 2016-04-26 09:58+0200\n"
 "Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr_CH\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1399362876.0\n"
+"X-POOTLE-MTIME: 1461661100.0\n"
 
 #. module: bss_qualified_contacts
 #: field:bss.partner.qualifier,name:0
@@ -47,6 +47,11 @@ msgstr "inconnu"
 #: field:bss.partner.qualified_contact.rel,phone:0
 msgid "Phone"
 msgstr "Téléphone"
+
+#. module: bss_qualified_contacts
+#: field:bss.partner.qualifier,protected:0
+msgid "Protected"
+msgstr "Protégé"
 
 #. module: bss_qualified_contacts
 #: field:bss.partner.qualified_contact.rel,contact_id:0

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-06 07:53+0000\n"
-"PO-Revision-Date: 2014-05-06 07:53+0000\n"
+"POT-Creation-Date: 2016-04-26 09:57+0000\n"
+"PO-Revision-Date: 2016-04-26 09:57+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -44,6 +44,11 @@ msgstr ""
 #. module: bss_qualified_contacts
 #: field:bss.partner.qualified_contact.rel,phone:0
 msgid "Phone"
+msgstr ""
+
+#. module: bss_qualified_contacts
+#: field:bss.partner.qualifier,protected:0
+msgid "Protected"
 msgstr ""
 
 #. module: bss_qualified_contacts

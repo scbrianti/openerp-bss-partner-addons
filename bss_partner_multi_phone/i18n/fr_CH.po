@@ -1,13 +1,12 @@
 # Translation of OpenERP Server.
 # This file contains the translation of the following modules:
-#	* bss_partner_multi_phone
-#
+# * bss_partner_multi_phone
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-30 11:52+0000\n"
-"PO-Revision-Date: 2014-04-30 13:56+0200\n"
+"POT-Creation-Date: 2016-04-26 09:53+0000\n"
+"PO-Revision-Date: 2016-04-26 09:54+0200\n"
 "Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr_CH\n"
@@ -16,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1398859010.0\n"
+"X-POOTLE-MTIME: 1461660895.0\n"
 
 #. module: bss_partner_multi_phone
 #: field:bss.partner.phone,category_id:0
@@ -34,14 +33,20 @@ msgid "Fax"
 msgstr "Fax"
 
 #. module: bss_partner_multi_phone
+#: field:bss.phone.category,required:0
+msgid "Required"
+msgstr "Requis"
+
+#. module: bss_partner_multi_phone
 #: field:bss.phone.category,name:0
 msgid "Name"
 msgstr "Nom"
 
 #. module: bss_partner_multi_phone
-#: model:ir.model,name:bss_partner_multi_phone.model_bss_partner_phone
-msgid "Partner Phone"
-msgstr "Téléphone de partenaire"
+#: constraint:bss.partner.phone:0
+msgid "A unique category cannot be used multiple times on a partner"
+msgstr ""
+"Une catégorie unique ne peut être utilisée qu'une seule fois par partenaire"
 
 #. module: bss_partner_multi_phone
 #: view:res.partner:0
@@ -56,19 +61,14 @@ msgid "Phone Category"
 msgstr "Catégorie de téléphone"
 
 #. module: bss_partner_multi_phone
-#: field:bss.phone.category,required:0
-msgid "Required"
-msgstr "Requis"
+#: model:ir.model,name:bss_partner_multi_phone.model_bss_partner_phone
+msgid "Partner Phone"
+msgstr "Téléphone de partenaire"
 
 #. module: bss_partner_multi_phone
 #: field:bss.partner.phone,number:0
 msgid "Number"
 msgstr "Numéro"
-
-#. module: bss_partner_multi_phone
-#: field:bss.partner.phone,sequence:0
-msgid "Sequence"
-msgstr "Séquence"
 
 #. module: bss_partner_multi_phone
 #: model:bss.phone.category,name:bss_partner_multi_phone.phone_category_phone
@@ -81,13 +81,21 @@ msgid "Mobile Phone"
 msgstr "Téléphone mobile"
 
 #. module: bss_partner_multi_phone
-#: constraint:bss.partner.phone:0
-msgid "A required category cannot be used multiple times on a partner"
-msgstr ""
-"Une catégorie requise ne peut être utilisée qu'une seule fois par partenaire"
+#: field:bss.partner.phone,sequence:0
+msgid "Sequence"
+msgstr "Séquence"
 
 #. module: bss_partner_multi_phone
 #: field:bss.partner.phone,partner_id:0
 #: model:ir.model,name:bss_partner_multi_phone.model_res_partner
 msgid "Partner"
 msgstr "Partenaire"
+
+#. module: bss_partner_multi_phone
+#: field:bss.phone.category,unique:0
+msgid "Unique"
+msgstr "Unique"
+
+#~ msgid "A required category cannot be used multiple times on a partner"
+#~ msgstr ""
+#~ "Une catégorie requise ne peut être utilisée qu'une seule fois par partenaire"

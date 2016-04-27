@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-30 11:52+0000\n"
-"PO-Revision-Date: 2014-04-30 11:52+0000\n"
+"POT-Creation-Date: 2016-04-26 09:53+0000\n"
+"PO-Revision-Date: 2016-04-26 09:53+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -31,13 +31,18 @@ msgid "Fax"
 msgstr ""
 
 #. module: bss_partner_multi_phone
+#: field:bss.phone.category,required:0
+msgid "Required"
+msgstr ""
+
+#. module: bss_partner_multi_phone
 #: field:bss.phone.category,name:0
 msgid "Name"
 msgstr ""
 
 #. module: bss_partner_multi_phone
-#: model:ir.model,name:bss_partner_multi_phone.model_bss_partner_phone
-msgid "Partner Phone"
+#: constraint:bss.partner.phone:0
+msgid "A unique category cannot be used multiple times on a partner"
 msgstr ""
 
 #. module: bss_partner_multi_phone
@@ -53,18 +58,13 @@ msgid "Phone Category"
 msgstr ""
 
 #. module: bss_partner_multi_phone
-#: field:bss.phone.category,required:0
-msgid "Required"
+#: model:ir.model,name:bss_partner_multi_phone.model_bss_partner_phone
+msgid "Partner Phone"
 msgstr ""
 
 #. module: bss_partner_multi_phone
 #: field:bss.partner.phone,number:0
 msgid "Number"
-msgstr ""
-
-#. module: bss_partner_multi_phone
-#: field:bss.partner.phone,sequence:0
-msgid "Sequence"
 msgstr ""
 
 #. module: bss_partner_multi_phone
@@ -78,13 +78,18 @@ msgid "Mobile Phone"
 msgstr ""
 
 #. module: bss_partner_multi_phone
-#: constraint:bss.partner.phone:0
-msgid "A required category cannot be used multiple times on a partner"
+#: field:bss.partner.phone,sequence:0
+msgid "Sequence"
 msgstr ""
 
 #. module: bss_partner_multi_phone
 #: field:bss.partner.phone,partner_id:0
 #: model:ir.model,name:bss_partner_multi_phone.model_res_partner
 msgid "Partner"
+msgstr ""
+
+#. module: bss_partner_multi_phone
+#: field:bss.phone.category,unique:0
+msgid "Unique"
 msgstr ""
 

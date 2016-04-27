@@ -1,12 +1,11 @@
 # Translation of OpenERP Server.
 # This file contains the translation of the following modules:
-#	* bss_marital_status
-#
+# * bss_marital_status
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-05 07:58+0000\n"
+"POT-Creation-Date: 2016-04-26 09:37+0000\n"
 "PO-Revision-Date: 2014-07-03 13:43+0200\n"
 "Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
 "Language-Team: \n"

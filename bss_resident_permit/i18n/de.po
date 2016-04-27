@@ -1,117 +1,118 @@
 # Translation of OpenERP Server.
 # This file contains the translation of the following modules:
-#	* bss_resident_permit
-#
+# * bss_resident_permit
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-26 09:59+0000\n"
-"PO-Revision-Date: 2016-04-26 09:59+0000\n"
-"Last-Translator: <>\n"
+"PO-Revision-Date: 2016-04-27 09:01+0200\n"
+"Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
 "Language-Team: \n"
+"Language: de_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.5.0\n"
+"X-POOTLE-MTIME: 1461744078.0\n"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_n
 msgid "Authorization for asylum seekers"
-msgstr ""
+msgstr "Berechtigung für Asylsuchende"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_ci
 msgid "Ci booklet"
-msgstr ""
+msgstr "Ausweis Ci"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_g
 msgid "Border authorization"
-msgstr ""
+msgstr "Grenzgängerbewilligung"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_n
 msgid "N booklet"
-msgstr ""
+msgstr "Ausweis N"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_s
 msgid "Authorization for people to protect"
-msgstr ""
+msgstr "Berechtigung für Schutzbedürftige"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_c
 msgid "Establishment authorization"
-msgstr ""
+msgstr "Niederlassungsbewilligung"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_b
 msgid "B permit"
-msgstr ""
+msgstr "Ausweis B"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_b
 msgid "Living authorization"
-msgstr ""
+msgstr "Aufenthaltsbewilligung"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_l
 msgid "Short-lived authorization"
-msgstr ""
+msgstr "Kurzaufenthaltsbewilligung"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_l
 msgid "L permit"
-msgstr ""
+msgstr "Ausweis L"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_g
 msgid "G booklet"
-msgstr ""
+msgstr "Ausweis G"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_ci
 msgid "Living authorization (diplomat)"
-msgstr ""
+msgstr "Aufenthaltsbewilligung mit Erwerbstätigkeit"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_f
 msgid "Authorization for temporarily admitted foreigners"
-msgstr ""
+msgstr "Vorläufig aufgenommene Ausländer"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_c
 msgid "C permit"
-msgstr ""
+msgstr "Ausweis C"
 
 #. module: bss_resident_permit
 #: model:ir.model,name:bss_resident_permit.model_bluestar_resident_permit
 msgid "Resident permit"
-msgstr ""
+msgstr "Aufenthaltserlaubnis"
 
 #. module: bss_resident_permit
 #: field:bluestar.resident_permit,name:0
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_s
 msgid "S booklet"
-msgstr ""
+msgstr "Ausweis S"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_f
 msgid "F booklet"
-msgstr ""
+msgstr "Ausweis F"
 
 #. module: bss_resident_permit
 #: model:ir.actions.act_window,name:bss_resident_permit.action_bluestar_resident_permit_form
 msgid "Resident Permit"
-msgstr ""
+msgstr "Aufenthaltserlaubnis"
 
 #. module: bss_resident_permit
 #: field:bluestar.resident_permit,description:0
 msgid "Description"
-msgstr ""
-
+msgstr "Beschreibung"

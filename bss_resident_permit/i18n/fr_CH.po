@@ -1,14 +1,13 @@
 # Translation of OpenERP Server.
 # This file contains the translation of the following modules:
-#	* bss_resident_permit
-#
+# * bss_resident_permit
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-05 08:59+0000\n"
-"PO-Revision-Date: 2013-09-05 15:31+0200\n"
-"Last-Translator: Pierre-Yves <pierre-yves.berger@blues2.ch>\n"
+"POT-Creation-Date: 2016-04-26 09:59+0000\n"
+"PO-Revision-Date: 2016-04-27 08:58+0200\n"
+"Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
 "Language-Team: \n"
 "Language: fr_CH\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1378387881.0\n"
+"X-POOTLE-MTIME: 1461743930.0\n"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_n
@@ -51,7 +50,7 @@ msgstr "Autorisation d'établissement"
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_b
 msgid "B permit"
-msgstr "Permis B"
+msgstr "Livret B"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_b
@@ -66,7 +65,7 @@ msgstr "Autorisation de courte durée"
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_l
 msgid "L permit"
-msgstr "Permis L"
+msgstr "Livret L"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_g
@@ -76,7 +75,7 @@ msgstr "Livret G"
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_ci
 msgid "Living authorization (diplomat)"
-msgstr "Autorisation de séjour (diplomate)"
+msgstr "Autorisation de séjour avec activité lucrative"
 
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_f
@@ -86,7 +85,7 @@ msgstr "Autorisation pour étrangers admis provisoirement"
 #. module: bss_resident_permit
 #: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_c
 msgid "C permit"
-msgstr "Permis C"
+msgstr "Livret C"
 
 #. module: bss_resident_permit
 #: model:ir.model,name:bss_resident_permit.model_bluestar_resident_permit

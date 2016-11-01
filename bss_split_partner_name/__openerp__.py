@@ -21,7 +21,7 @@
 
 {
     'name': 'Split Partner Name',
-    'version': '7.0.2.2-20160427',
+    'version': '7.0.3.0',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """

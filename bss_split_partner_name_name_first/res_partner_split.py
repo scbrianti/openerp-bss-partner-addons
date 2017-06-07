@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2014 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
+#    Copyright (C) 2017 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,34 +19,13 @@
 #
 ##############################################################################
 
-{
-    'name': 'Qualified Contacts',
-    'version': '7.0.4.0',
-    "category": 'Bluestar/Generic module',
-    'complexity': "easy",
-    'description': """
-Qualified contacts
-==================
+from openerp.osv import osv
 
-Add a qualified many to many link between partners to manage qualified
-contacts.
 
-Rename "Contacts" tab in the partner form "Structure" and add a tab named
-"Contacts" with qualified contacts.
-    """,
-    'author': 'Bluestar Solutions Sàrl',
-    'website': 'http://www.blues2.ch',
-    'depends': [],
-    'data': ['security/ir.model.access.csv',
-             'security/ir_rule.xml',
+class res_partner_split(osv.osv):
+    _inherit = 'res.partner'
 
-             'partner_qualified_contact.xml', ],
-    'demo': [],
-    'test': [],
-    'installable': True,
-    'application': False,
-    'auto_install': False,
-    'images': [],
-}
+    def _full_name(self, first_name, last_name):
+        return '%s %s' % (last_name, first_name)
 
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+res_partner_split()

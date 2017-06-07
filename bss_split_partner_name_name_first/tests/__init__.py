@@ -19,34 +19,8 @@
 #
 ##############################################################################
 
-{
-    'name': 'Qualified Contacts',
-    'version': '7.0.4.0',
-    "category": 'Bluestar/Generic module',
-    'complexity': "easy",
-    'description': """
-Qualified contacts
-==================
+import test_partner_name
 
-Add a qualified many to many link between partners to manage qualified
-contacts.
-
-Rename "Contacts" tab in the partner form "Structure" and add a tab named
-"Contacts" with qualified contacts.
-    """,
-    'author': 'Bluestar Solutions Sàrl',
-    'website': 'http://www.blues2.ch',
-    'depends': [],
-    'data': ['security/ir.model.access.csv',
-             'security/ir_rule.xml',
-
-             'partner_qualified_contact.xml', ],
-    'demo': [],
-    'test': [],
-    'installable': True,
-    'application': False,
-    'auto_install': False,
-    'images': [],
-}
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+checks = [
+    test_partner_name,
+]

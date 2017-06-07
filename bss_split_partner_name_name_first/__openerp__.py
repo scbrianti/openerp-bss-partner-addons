@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2014 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
+#    Copyright (C) 2017 Bluestar Solutions Sàrl (<http://www.blues2.ch>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,27 +20,20 @@
 ##############################################################################
 
 {
-    'name': 'Qualified Contacts',
+    'name': 'Split Partner Name - Name First',
     'version': '7.0.4.0',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """
-Qualified contacts
-==================
+Split Partner Name - Name First
+===============================
 
-Add a qualified many to many link between partners to manage qualified
-contacts.
-
-Rename "Contacts" tab in the partner form "Structure" and add a tab named
-"Contacts" with qualified contacts.
+An addon to "Split Partner Name" module, to use name first in computed name.
     """,
     'author': 'Bluestar Solutions Sàrl',
     'website': 'http://www.blues2.ch',
-    'depends': [],
-    'data': ['security/ir.model.access.csv',
-             'security/ir_rule.xml',
-
-             'partner_qualified_contact.xml', ],
+    'depends': ['bss_split_partner_name'],
+    'data': ['res_partner_split_view.xml'],
     'demo': [],
     'test': [],
     'installable': True,

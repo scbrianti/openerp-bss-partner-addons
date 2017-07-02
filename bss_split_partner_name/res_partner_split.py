@@ -39,11 +39,11 @@ class res_partner_split(osv.osv):
 
     def create(self, cr, uid, vals, context=None):
         if vals.get('name'):
-            if vals.get('first_name') or vals.get('last_name'):
-                raise osv.except_osv('Error', 'name cannot be defined if '
-                                     'first name or last name is defined')
-            vals['first_name'] = vals['name']
-        elif vals.get('first_name') or vals.get('last_name'):
+            if vals.get('first_name'):
+                vals.pop('name')
+            else:
+                vals['first_name'] = vals['name']
+        if vals.get('first_name') or vals.get('last_name'):
             if vals.get('is_company'):
                 vals['name'] = vals.get('first_name')
             elif vals.get('last_name'):

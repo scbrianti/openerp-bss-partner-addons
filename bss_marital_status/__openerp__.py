@@ -21,7 +21,7 @@
 
 {
     'name': 'Marital status',
-    'version': '7.0.4.0',
+    'version': '7.0.4.1',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """

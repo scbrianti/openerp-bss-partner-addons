@@ -19,24 +19,24 @@
 #
 ##############################################################################
 
-from openerp.osv import osv, fields
+from odoo import models, fields
 
 
-class res_partner_split(osv.osv):
+class res_partner_split(models.Model):
     _inherit = 'res.partner'
 
-    _columns = {
-        'first_name': fields.char('First Name', size=64, required=False,
-                                  select=True),
-        'last_name': fields.char('Last Name', size=64, required=False,
-                                 select=True),
-    }
+    first_name = fields.char('First Name', size=64, required=False,
+                             select=True)
+    last_name = fields.Char('Last Name', size=64, required=False,
+                            select=True)
 
+    @api.v7
     def _full_name(self, first_name, last_name):
         """Private method to override if you want to change the computed name.
         """
         return '%s %s' % (first_name, last_name)
 
+    @api.v7
     def create(self, cr, uid, vals, context=None):
         if vals.get('name'):
             if vals.get('first_name'):
@@ -55,6 +55,7 @@ class res_partner_split(osv.osv):
         return super(res_partner_split, self).create(cr, uid, vals,
                                                      context=context)
 
+    @api.v7
     def write(self, cr, uid, ids, vals, context=None):
         if vals.get('name'):
             if vals.get('first_name') or vals.get('last_name'):
@@ -81,6 +82,7 @@ class res_partner_split(osv.osv):
             return super(res_partner_split, self).write(cr, uid, ids, vals,
                                                         context=context)
 
+    @api.v7
     def _res_partner_split_install(self, cr, uid, ids=None, context=None):
         """Fill the first_name field with name value at install."""
         if ids is not None:
@@ -89,5 +91,6 @@ class res_partner_split(osv.osv):
 
         cr.execute("update res_partner set first_name = name")
         return True
+
 
 res_partner_split()

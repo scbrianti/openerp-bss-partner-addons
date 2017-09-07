@@ -19,39 +19,33 @@
 #
 ##############################################################################
 
-from openerp.osv import osv, fields
+from odoo import models, fields
 
 
-class bss_partner_qualifier(osv.osv):
+class bss_partner_qualifier(models.Model):
 
     _name = 'bss.partner.qualifier'
 
-    _columns = {
-        'name': fields.char('Name', size=64, translate=True, required=True),
-        'protected': fields.boolean('Protected'),
-    }
+    name = fields.Char('Name', size=64, translate=True, required=True)
+    protected = fields.Boolean('Protected', default=False)
 
-    _defaults = {
-        'protected': False,
-    }
 
 bss_partner_qualifier()
 
 
-class bss_partner_qualified_contact_rel(osv.osv):
+class bss_partner_qualified_contact_rel(models.Model):
 
     _name = 'bss.partner.qualified_contact.rel'
 
-    _columns = {
-        'parent_id': fields.many2one('res.partner', 'Parent'),
-        'contact_id': fields.many2one('res.partner', 'Contact'),
-        'qualifier_id': fields.many2one('bss.partner.qualifier', 'Qualifier'),
-        'phone': fields.related('contact_id', 'phone', type="char",
-                                readonly=True, string="Phone", store=False),
-        'mobile': fields.related('contact_id', 'mobile', type="char",
-                                 readonly=True, string="Mobile", store=False),
-    }
+    parent_id = fields.Many2one('res.partner', "Parent")
+    contact_id = fields.Many2one('res.partner', "Contact")
+    qualifier_id = fields.Many2one('bss.partner.qualifier', "Qualifier")
+    phone = fields.Char(related='contact_id.phone', string="Phone",
+                        readonly=True,  store=False)
+    mobile = fields.Char(related='contact_id.mobile', string="Mobile",
+                         readonly=True, store=False)
 
+    @api.v7
     def open_contact(self, cr, uid, ids, context=None):
         res_id = self.browse(cr, uid, ids[0], context).contact_id.id
         return {
@@ -61,23 +55,23 @@ class bss_partner_qualified_contact_rel(osv.osv):
             'view_mode': 'form',
         }
 
+
 bss_partner_qualified_contact_rel()
 
 
-class bss_partner_qualified_contact(osv.osv):
+class bss_partner_qualified_contact(models.Model):
 
     _inherit = 'res.partner'
 
-    _columns = {
-        'qualified_contact_ids': fields.many2many(
-            'res.partner',
-            'bss_partner_qualified_contact_rel',
-            'parent_id', 'contact_id', 'Contacts'
-        ),
-        'qualified_contact_rel_ids': fields.one2many(
-            'bss.partner.qualified_contact.rel',
-            'parent_id'
-        ),
-    }
+    qualified_contact_ids = fields.Many2many(
+        'res.partner',
+        'bss_partner_qualified_contact_rel',
+        'parent_id', 'contact_id', 'Contacts'
+    )
+    qualified_contact_rel_ids = fields.One2many(
+        'bss.partner.qualified_contact.rel',
+        'parent_id', string="Contact Relations"
+    )
+
 
 bss_partner_qualified_contact()

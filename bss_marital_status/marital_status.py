@@ -19,20 +19,15 @@
 #
 ##############################################################################
 
-from openerp.osv import osv, fields
+from odoo import models, fields
 
 
-class bluestar_marital_status(osv.osv):
+class bluestar_marital_status(models.Model):
 
     _name = 'bluestar.marital_status'
     _description = "Marital status"
 
-    _columns = {
-        'name': fields.char('Name', size=32, required=True, translate=True),
-    }
+    name = fields.Char('Name', size=32, required=True, translate=True)
 
-    _defaults = {
-
-    }
 
 bluestar_marital_status()

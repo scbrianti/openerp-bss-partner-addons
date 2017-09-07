@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
 	<data noupdate="1">
-		<record id="seq_type_master_item" model="ir.sequence.type">
-			<field name="name">Bluestar partner reference</field>
-			<field name="code">bluestar.partner.ref</field>
-		</record>
 		<record id="seq_master_item" model="ir.sequence">
 			<field name="name">Bluestar partner reference</field>
 			<field name="code">bluestar.partner.ref</field>

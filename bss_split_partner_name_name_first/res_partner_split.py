@@ -19,12 +19,13 @@
 #
 ##############################################################################
 
-from openerp.osv import osv
+from odoo import models
 
 
-class res_partner_split(osv.osv):
+class res_partner_split(models.Model):
     _inherit = 'res.partner'
 
+    @api.v7
     def _full_name(self, first_name, last_name):
         return '%s %s' % (last_name, first_name)
 

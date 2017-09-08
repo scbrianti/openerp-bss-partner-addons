@@ -19,29 +19,29 @@
 #
 ##############################################################################
 
-from openerp.osv import osv, fields
+from odoo import models, fields
 
 GENERATE_REFS = [('none', 'None'),
                  ('empty', 'For partners with empty references'),
                  ('all', 'For all existing partners')]
 
 
-class bluestar_partner_reference(osv.osv):
+class bluestar_partner_reference(models.Model):
 
     _inherit = 'res.partner'
     _description = "Bluestar partner reference"
 
-    _columns = {
-        'ref': fields.char('Reference', size=64, select=1, readonly=True),
-    }
+    ref = fields.Char('Reference', size=64, index=True, readonly=True)
 
-    _defaults = {
-        'customer': lambda self, cr, uid, context:
-        context['customer'] if context and 'customer' in context else 1,
-        'supplier': lambda self, cr, uid, context:
-        context['supplier'] if context and 'supplier' in context else 0,
-    }
+    # TODO: manage defaults
+    # _defaults = {
+    #     'customer': lambda self, cr, uid, context:
+    #     context['customer'] if context and 'customer' in context else 1,
+    #     'supplier': lambda self, cr, uid, context:
+    #     context['supplier'] if context and 'supplier' in context else 0,
+    # }
 
+    @api.v7
     def create(self, cr, uid, vals, context=None):
         if 'ref' not in vals:
             vals['ref'] = self.pool.get('ir.sequence'
@@ -49,19 +49,19 @@ class bluestar_partner_reference(osv.osv):
         return super(bluestar_partner_reference,
                      self).create(cr, uid, vals, context=context)
 
+
 bluestar_partner_reference()
 
 
-class bluestar_partner_reference_config(osv.osv_memory):
+class bluestar_partner_reference_config(models.TransientModel):
 
     _name = 'bss.partner.reference.config'
     _inherit = 'res.config'
 
-    _columns = {
-        'generate_ref': fields.selection(GENERATE_REFS, 'Generate references',
-                                         required=True),
-    }
+    generate_ref = fields.Selection(GENERATE_REFS, 'Generate references',
+                                    required=True)
 
+    @api.v7
     def execute(self, cr, uid, ids, context=None):
         for config in self.read(cr, uid, ids, ['generate_ref']):
             partner_ids = []
@@ -107,5 +107,6 @@ class bluestar_partner_reference_config(osv.osv_memory):
                                      'There is duplicates references !')
 
         return True
+
 
 bluestar_partner_reference_config()

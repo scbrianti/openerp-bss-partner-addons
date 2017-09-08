@@ -19,22 +19,16 @@
 #
 ##############################################################################
 
-from openerp.osv import osv, fields
+from odoo import models, fields
 
 
-class bluestar_resident_permit(osv.osv):
+class bluestar_resident_permit(models.Model):
 
     _name = 'bluestar.resident_permit'
     _description = "Resident permit"
 
-    _columns = {
-        'name': fields.char('Name', size=20, required=True, translate=True),
-        'description': fields.char('Description', size=200, required=True,
-                                   translate=True),
-    }
-
-    _defaults = {
-
-    }
+    name = fields.Char('Name', size=20, required=True, translate=True)
+    description = fields.Char('Description', size=200, required=True,
+                              translate=True)
 
 bluestar_resident_permit()

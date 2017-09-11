@@ -20,8 +20,8 @@
 ##############################################################################
 
 import unittest2
-import openerp.tests.common as common
-from openerp.netsvc import logging
+import odoo.tests.common as common
+from odoo.netsvc import logging
 
 
 class test_partner_qualified_contact(common.TransactionCase):

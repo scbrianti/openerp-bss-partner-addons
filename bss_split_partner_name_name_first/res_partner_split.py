@@ -19,7 +19,7 @@
 #
 ##############################################################################
 
-from odoo import models
+from odoo import models, api
 
 
 class res_partner_split(models.Model):

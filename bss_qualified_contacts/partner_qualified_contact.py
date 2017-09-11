@@ -19,7 +19,7 @@
 #
 ##############################################################################
 
-from odoo import models, fields
+from odoo import models, fields, api
 
 
 class bss_partner_qualifier(models.Model):
@@ -41,7 +41,7 @@ class bss_partner_qualified_contact_rel(models.Model):
     contact_id = fields.Many2one('res.partner', "Contact")
     qualifier_id = fields.Many2one('bss.partner.qualifier', "Qualifier")
     phone = fields.Char(related='contact_id.phone', string="Phone",
-                        readonly=True,  store=False)
+                        readonly=True, store=False)
     mobile = fields.Char(related='contact_id.mobile', string="Mobile",
                          readonly=True, store=False)
 

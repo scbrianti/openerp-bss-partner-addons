@@ -19,13 +19,14 @@
 #
 ##############################################################################
 
-from odoo import models, fields
+from odoo import models, fields, api
+from odoo.osv import osv
 
 
 class res_partner_split(models.Model):
     _inherit = 'res.partner'
 
-    first_name = fields.char('First Name', size=64, required=False,
+    first_name = fields.Char('First Name', size=64, required=False,
                              select=True)
     last_name = fields.Char('Last Name', size=64, required=False,
                             select=True)
@@ -82,14 +83,10 @@ class res_partner_split(models.Model):
             return super(res_partner_split, self).write(cr, uid, ids, vals,
                                                         context=context)
 
-    @api.v7
-    def _res_partner_split_install(self, cr, uid, ids=None, context=None):
+    @api.model
+    def _res_partner_split_install(self):
         """Fill the first_name field with name value at install."""
-        if ids is not None:
-            raise NotImplementedError(
-                "Ids is just there by convention! Please don't use it.")
-
-        cr.execute("update res_partner set first_name = name")
+        self.env.cr.execute("update res_partner set first_name = name")
         return True
 
 

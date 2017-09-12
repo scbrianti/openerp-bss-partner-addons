@@ -1,6 +1,7 @@
 <openerp>
   <data noupdate="1">
     <!-- Installation script for database migration -->
-    <function model="res.partner" name="_res_partner_split_install"/>
+    <function id="function_res_partner_split_install"
+        model="res.partner" name="_res_partner_split_install"/>
   </data>
 </openerp>

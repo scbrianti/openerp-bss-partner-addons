@@ -19,7 +19,8 @@
 #
 ##############################################################################
 
-from odoo import models, fields
+from odoo import models, fields, api
+from odoo.osv import osv
 
 GENERATE_REFS = [('none', 'None'),
                  ('empty', 'For partners with empty references'),

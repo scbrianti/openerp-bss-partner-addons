@@ -42,13 +42,11 @@ class bluestar_partner_reference(models.Model):
     #     context['supplier'] if context and 'supplier' in context else 0,
     # }
 
-    @api.v7
-    def create(self, cr, uid, vals, context=None):
+    @api.model
+    def create(self, vals):
         if 'ref' not in vals:
-            vals['ref'] = self.pool.get('ir.sequence'
-                                        ).get(cr, uid, 'bluestar.partner.ref')
-        return super(bluestar_partner_reference,
-                     self).create(cr, uid, vals, context=context)
+            vals['ref'] = self.env['ir.sequence'].get('bluestar.partner.ref')
+        return super(bluestar_partner_reference, self).create(vals)
 
 
 bluestar_partner_reference()

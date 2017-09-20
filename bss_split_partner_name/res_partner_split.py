@@ -37,8 +37,8 @@ class res_partner_split(models.Model):
         """
         return '%s %s' % (first_name, last_name)
 
-    @api.v7
-    def create(self, cr, uid, vals, context=None):
+    @api.model
+    def create(self, vals):
         if vals.get('name'):
             if vals.get('first_name'):
                 vals.pop('name')
@@ -53,22 +53,19 @@ class res_partner_split(models.Model):
             else:
                 vals['name'] = vals.get('first_name')
 
-        return super(res_partner_split, self).create(cr, uid, vals,
-                                                     context=context)
+        return super(res_partner_split, self).create(vals)
 
-    @api.v7
-    def write(self, cr, uid, ids, vals, context=None):
+    @api.multi
+    def write(self, vals):
         if vals.get('name'):
             if vals.get('first_name') or vals.get('last_name'):
                 raise osv.except_osv('Error', 'name cannot be defined if '
                                      'first name or last name is defined')
             vals['first_name'] = vals['name']
-            return super(res_partner_split, self).write(cr, uid, ids, vals,
-                                                        context=context)
+            return super(res_partner_split, self).write(vals)
         elif vals.get('first_name') or vals.get('last_name'):
-            super(res_partner_split, self).write(cr, uid, ids, vals,
-                                                 context=context)
-            for p in self.browse(cr, uid, ids, context=context):
+            super(res_partner_split, self).write(vals)
+            for p in self:
                 n_vals = {}
                 if p.is_company:
                     n_vals['name'] = p.first_name
@@ -76,12 +73,10 @@ class res_partner_split(models.Model):
                     n_vals['name'] = self._full_name(p.first_name, p.last_name)
                 else:
                     n_vals['name'] = p.first_name
-                super(res_partner_split, self).write(cr, uid, ids, n_vals,
-                                                     context=context)
+                super(res_partner_split, self).write(n_vals)
             return True
         else:
-            return super(res_partner_split, self).write(cr, uid, ids, vals,
-                                                        context=context)
+            return super(res_partner_split, self).write(vals)
 
     @api.model
     def _res_partner_split_install(self):

@@ -27,9 +27,9 @@ class res_partner_split(models.Model):
     _inherit = 'res.partner'
 
     first_name = fields.Char('First Name', size=64, required=False,
-                             select=True)
+                             index=True)
     last_name = fields.Char('Last Name', size=64, required=False,
-                            select=True)
+                            index=True)
 
     @api.v7
     def _full_name(self, first_name, last_name):

@@ -21,7 +21,7 @@
 
 {
     'name': 'Resident Permits',
-    'version': '7.0.4.1',
+    'version': '7.0.4.2',
     "category": 'Bluestar/Generic module',
     'complexity': "easy",
     'description': """

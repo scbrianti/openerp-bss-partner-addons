@@ -42,10 +42,11 @@ class res_partner_split(osv.osv):
             if vals.get('first_name'):
                 vals.pop('name')
             else:
-                vals['first_name'] = vals['name']
+                vals['first_name'] = vals.pop('name')
         if vals.get('first_name') or vals.get('last_name'):
             if vals.get('is_company'):
                 vals['name'] = vals.get('first_name')
+                vals.pop('last_name', None)
             elif vals.get('last_name'):
                 vals['name'] = self._full_name(vals.get('first_name'),
                                                vals.get('last_name'))
@@ -60,7 +61,7 @@ class res_partner_split(osv.osv):
             if vals.get('first_name') or vals.get('last_name'):
                 raise osv.except_osv('Error', 'name cannot be defined if '
                                      'first name or last name is defined')
-            vals['first_name'] = vals['name']
+            vals['first_name'] = vals.pop('name')
             return super(res_partner_split, self).write(cr, uid, ids, vals,
                                                         context=context)
         elif vals.get('first_name') or vals.get('last_name'):
@@ -70,6 +71,7 @@ class res_partner_split(osv.osv):
                 n_vals = {}
                 if p.is_company:
                     n_vals['name'] = p.first_name
+                    n_vals['last_name'] = None
                 elif p.last_name:
                     n_vals['name'] = self._full_name(p.first_name, p.last_name)
                 else:
@@ -89,5 +91,6 @@ class res_partner_split(osv.osv):
 
         cr.execute("update res_partner set first_name = name")
         return True
+
 
 res_partner_split()

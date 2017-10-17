@@ -43,7 +43,8 @@ class res_partner_split(osv.osv):
                 vals.pop('name')
             else:
                 vals['first_name'] = vals.pop('name')
-        if vals.get('first_name') or vals.get('last_name'):
+        if (vals.get('first_name') or vals.get('last_name') or
+                vals.get('is_company')):
             if vals.get('is_company'):
                 vals['name'] = vals.get('first_name')
                 vals.pop('last_name', None)
@@ -64,7 +65,8 @@ class res_partner_split(osv.osv):
             vals['first_name'] = vals.pop('name')
             return super(res_partner_split, self).write(cr, uid, ids, vals,
                                                         context=context)
-        elif vals.get('first_name') or vals.get('last_name'):
+        elif (vals.get('first_name') or vals.get('last_name') or
+              vals.get('is_company')):
             super(res_partner_split, self).write(cr, uid, ids, vals,
                                                  context=context)
             for p in self.browse(cr, uid, ids, context=context):

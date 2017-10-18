@@ -1,0 +1,153 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* bss_resident_permit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-18 13:17+0000\n"
+"PO-Revision-Date: 2017-10-18 13:17+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,description:bss_resident_permit.bluestar_resident_permit_n
+msgid "Authorization for asylum seekers"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,description:bss_resident_permit.bluestar_resident_permit_s
+msgid "Authorization for people to protect"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,description:bss_resident_permit.bluestar_resident_permit_f
+msgid "Authorization for temporarily admitted foreigners"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,name:bss_resident_permit.bluestar_resident_permit_b
+msgid "B permit"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,description:bss_resident_permit.bluestar_resident_permit_g
+msgid "Border authorization"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,name:bss_resident_permit.bluestar_resident_permit_c
+msgid "C permit"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,name:bss_resident_permit.bluestar_resident_permit_ci
+msgid "Ci booklet"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:ir.model.fields,field_description:bss_resident_permit.field_bss_resident_permit_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:ir.model.fields,field_description:bss_resident_permit.field_bss_resident_permit_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:ir.model.fields,field_description:bss_resident_permit.field_bss_resident_permit_description
+msgid "Description"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:ir.model.fields,field_description:bss_resident_permit.field_bss_resident_permit_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,description:bss_resident_permit.bluestar_resident_permit_c
+msgid "Establishment authorization"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,name:bss_resident_permit.bluestar_resident_permit_f
+msgid "F booklet"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,name:bss_resident_permit.bluestar_resident_permit_g
+msgid "G booklet"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:ir.model.fields,field_description:bss_resident_permit.field_bss_resident_permit_id
+msgid "ID"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,name:bss_resident_permit.bluestar_resident_permit_l
+msgid "L permit"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:ir.model.fields,field_description:bss_resident_permit.field_bss_resident_permit___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:ir.model.fields,field_description:bss_resident_permit.field_bss_resident_permit_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:ir.model.fields,field_description:bss_resident_permit.field_bss_resident_permit_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,description:bss_resident_permit.bluestar_resident_permit_b
+msgid "Living authorization"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,description:bss_resident_permit.bluestar_resident_permit_ci
+msgid "Living authorization (diplomat)"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,name:bss_resident_permit.bluestar_resident_permit_n
+msgid "N booklet"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:ir.model.fields,field_description:bss_resident_permit.field_bss_resident_permit_name
+msgid "Name"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:ir.actions.act_window,name:bss_resident_permit.bss_resident_permit_action
+#: model:ir.ui.menu,name:bss_resident_permit.bss_resident_permit_menu
+msgid "Resident Permits"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:ir.model,name:bss_resident_permit.model_bss_resident_permit
+msgid "Resident permit"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,name:bss_resident_permit.bluestar_resident_permit_s
+msgid "S booklet"
+msgstr ""
+
+#. module: bss_resident_permit
+#: model:bss.resident_permit,description:bss_resident_permit.bluestar_resident_permit_l
+msgid "Short-lived authorization"
+msgstr ""
+

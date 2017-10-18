@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+
+    <record id="bss_marital_status_tree_view" model="ir.ui.view">
+        <field name="name">bss_marital_status.tree</field>
+        <field name="model">bss.marital_status</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="bss_marital_status_action" model="ir.actions.act_window">
+        <field name="name">Marital Status</field>
+        <field name="res_model">bss.marital_status</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        id="bss_marital_status_menu"
+        parent="sales_team.menu_config_address_book"
+        action="bss_marital_status_action"
+        sequence="91"
+        groups="base.group_no_one"/>
+
+</openerp>

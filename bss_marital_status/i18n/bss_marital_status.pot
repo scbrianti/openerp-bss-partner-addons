@@ -1,13 +1,13 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 #	* bss_marital_status
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 7.0\n"
+"Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-26 09:37+0000\n"
-"PO-Revision-Date: 2016-04-26 09:37+0000\n"
+"POT-Creation-Date: 2017-10-18 13:17+0000\n"
+"PO-Revision-Date: 2017-10-18 13:17+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,42 +16,78 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: bss_marital_status
-#: model:ir.model,name:bss_marital_status.model_bluestar_marital_status
-msgid "Marital status"
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status_create_uid
+msgid "Created by"
 msgstr ""
 
 #. module: bss_marital_status
-#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_widower
-msgid "Widow, widower"
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status_create_date
+msgid "Created on"
 msgstr ""
 
 #. module: bss_marital_status
-#: field:bluestar.marital_status,name:0
-msgid "Name"
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status_display_name
+msgid "Display Name"
 msgstr ""
 
 #. module: bss_marital_status
-#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_divorced
+#: model:bss.marital_status,name:bss_marital_status.bss_marital_status_divorced
 msgid "Divorced"
 msgstr ""
 
 #. module: bss_marital_status
-#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_married
-msgid "Married"
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status_id
+msgid "ID"
 msgstr ""
 
 #. module: bss_marital_status
-#: model:ir.actions.act_window,name:bss_marital_status.action_bluestar_marital_status_form
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: bss_marital_status
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: bss_marital_status
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: bss_marital_status
+#: model:ir.actions.act_window,name:bss_marital_status.bss_marital_status_action
+#: model:ir.ui.menu,name:bss_marital_status.bss_marital_status_menu
 msgid "Marital Status"
 msgstr ""
 
 #. module: bss_marital_status
-#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_single
+#: model:ir.model,name:bss_marital_status.model_bss_marital_status
+msgid "Marital status"
+msgstr ""
+
+#. module: bss_marital_status
+#: model:bss.marital_status,name:bss_marital_status.bss_marital_status_married
+msgid "Married"
+msgstr ""
+
+#. module: bss_marital_status
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status_name
+msgid "Name"
+msgstr ""
+
+#. module: bss_marital_status
+#: model:bss.marital_status,name:bss_marital_status.bss_marital_status_pacse
+msgid "PACS (civil partnership)"
+msgstr ""
+
+#. module: bss_marital_status
+#: model:bss.marital_status,name:bss_marital_status.bss_marital_status_single
 msgid "Single"
 msgstr ""
 
 #. module: bss_marital_status
-#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_pacse
-msgid "PACS (civil partnership)"
+#: model:bss.marital_status,name:bss_marital_status.bss_marital_status_widower
+msgid "Widow, widower"
 msgstr ""
 

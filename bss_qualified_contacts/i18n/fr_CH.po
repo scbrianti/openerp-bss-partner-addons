@@ -1,12 +1,12 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * bss_qualified_contacts
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-26 09:57+0000\n"
-"PO-Revision-Date: 2016-04-26 09:58+0200\n"
+"POT-Creation-Date: 2017-10-18 13:17+0000\n"
+"PO-Revision-Date: 2017-10-18 13:46+0200\n"
 "Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr_CH\n"
@@ -15,53 +15,82 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1461661100.0\n"
+"X-POOTLE-MTIME: 1508330799.0\n"
 
 #. module: bss_qualified_contacts
-#: field:bss.partner.qualifier,name:0
-msgid "Name"
-msgstr "Nom"
-
-#. module: bss_qualified_contacts
-#: field:bss.partner.qualified_contact.rel,parent_id:0
-msgid "Parent"
-msgstr "Parent"
-
-#. module: bss_qualified_contacts
-#: view:res.partner:0
-#: field:res.partner,qualified_contact_ids:0
-msgid "Contacts"
-msgstr "Contacts"
-
-#. module: bss_qualified_contacts
-#: field:bss.partner.qualified_contact.rel,mobile:0
-msgid "Mobile"
-msgstr "Mobile"
-
-#. module: bss_qualified_contacts
-#: field:res.partner,qualified_contact_rel_ids:0
-msgid "unknown"
-msgstr "inconnu"
-
-#. module: bss_qualified_contacts
-#: field:bss.partner.qualified_contact.rel,phone:0
-msgid "Phone"
-msgstr "Téléphone"
-
-#. module: bss_qualified_contacts
-#: field:bss.partner.qualifier,protected:0
-msgid "Protected"
-msgstr "Protégé"
-
-#. module: bss_qualified_contacts
-#: field:bss.partner.qualified_contact.rel,contact_id:0
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualified_contact_rel_contact_id
 msgid "Contact"
 msgstr "Contact"
 
 #. module: bss_qualified_contacts
-#: model:ir.model,name:bss_qualified_contacts.model_bss_partner_qualified_contact_rel
-msgid "bss.partner.qualified_contact.rel"
-msgstr "bss.partner.qualified_contact.rel"
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_res_partner_qualified_contact_rel_ids
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_res_users_qualified_contact_rel_ids
+msgid "Contact Relations"
+msgstr "Relations des contacts"
+
+#. module: bss_qualified_contacts
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_res_partner_qualified_contact_ids
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_res_users_qualified_contact_ids
+#: model:ir.ui.view,arch_db:bss_qualified_contacts.res_partner_form_view_inherit_bss_qualified_contacts
+msgid "Contacts"
+msgstr "Contacts"
+
+#. module: bss_qualified_contacts
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualified_contact_rel_create_uid
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualifier_create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: bss_qualified_contacts
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualified_contact_rel_create_date
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualifier_create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: bss_qualified_contacts
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualified_contact_rel_display_name
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualifier_display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: bss_qualified_contacts
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualified_contact_rel_id
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualifier_id
+msgid "ID"
+msgstr "ID"
+
+#. module: bss_qualified_contacts
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualified_contact_rel___last_update
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualifier___last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: bss_qualified_contacts
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualified_contact_rel_write_uid
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualifier_write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: bss_qualified_contacts
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualified_contact_rel_write_date
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualifier_write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: bss_qualified_contacts
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualified_contact_rel_mobile
+msgid "Mobile"
+msgstr "Mobile"
+
+#. module: bss_qualified_contacts
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualifier_name
+msgid "Name"
+msgstr "Nom"
+
+#. module: bss_qualified_contacts
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualified_contact_rel_parent_id
+msgid "Parent"
+msgstr "Parent"
 
 #. module: bss_qualified_contacts
 #: model:ir.model,name:bss_qualified_contacts.model_res_partner
@@ -69,21 +98,31 @@ msgid "Partner"
 msgstr "Partenaire"
 
 #. module: bss_qualified_contacts
+#: model:ir.model,name:bss_qualified_contacts.model_bss_partner_qualified_contact_rel
+msgid "Partner Qualified Contact Relation"
+msgstr "Relation de contact qualifié de partenaire"
+
+#. module: bss_qualified_contacts
 #: model:ir.model,name:bss_qualified_contacts.model_bss_partner_qualifier
-msgid "bss.partner.qualifier"
-msgstr "bss.partner.qualifier"
+msgid "Partner Qualifier"
+msgstr "Qualifiant de partenaire"
 
 #. module: bss_qualified_contacts
-#: view:res.partner:0
-msgid "Open"
-msgstr "Ouvrir"
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualified_contact_rel_phone
+msgid "Phone"
+msgstr "Téléphone"
 
 #. module: bss_qualified_contacts
-#: view:res.partner:0
-msgid "Structure"
-msgstr "Structure"
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualifier_protected
+msgid "Protected"
+msgstr "Protégé"
 
 #. module: bss_qualified_contacts
-#: field:bss.partner.qualified_contact.rel,qualifier_id:0
+#: model:ir.model.fields,field_description:bss_qualified_contacts.field_bss_partner_qualified_contact_rel_qualifier_id
 msgid "Qualifier"
 msgstr "Qualifiant"
+
+#. module: bss_qualified_contacts
+#: model:ir.ui.view,arch_db:bss_qualified_contacts.res_partner_form_view_inherit_bss_qualified_contacts
+msgid "Structure"
+msgstr "Structure"

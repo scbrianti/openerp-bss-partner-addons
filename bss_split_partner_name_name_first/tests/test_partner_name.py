@@ -82,5 +82,6 @@ class test_partner_name(common.TransactionCase):
         self.assertEqual(darth_vader.first_name, 'Darth Vader')
         self.assertEqual(darth_vader.name, 'Darth Vader')
 
+
 if __name__ == '__main__':
     unittest2.main()

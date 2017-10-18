@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+
+    <record id="bss_resident_permit_tree_view" model="ir.ui.view">
+        <field name="name">bss.resident_permit.tree</field>
+        <field name="model">bss.resident_permit</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name" />
+                <field name="description" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="bss_resident_permit_action" model="ir.actions.act_window">
+        <field name="name">Resident Permits</field>
+        <field name="res_model">bss.resident_permit</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        id="bss_resident_permit_menu"
+        parent="sales_team.menu_config_address_book"
+        action="bss_resident_permit_action"
+        sequence="92"
+        groups="base.group_no_one"/>
+
+
+</openerp>

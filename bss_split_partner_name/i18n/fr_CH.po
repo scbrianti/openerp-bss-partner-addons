@@ -1,118 +1,48 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * bss_resident_permit
+#	* bss_split_partner_name
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 7.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-26 09:59+0000\n"
-"PO-Revision-Date: 2013-09-05 15:31+0200\n"
-"Last-Translator: Pierre-Yves <pierre-yves.berger@blues2.ch>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2017-10-18 13:17+0000\n"
+"PO-Revision-Date: 2017-10-18 13:54+0200\n"
+"Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1378387881.0\n"
+"X-POOTLE-MTIME: 1508331244.0\n"
 
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_n
-msgid "Authorization for asylum seekers"
-msgstr "Autorisation pour requérants d'asile"
+#. module: bss_split_partner_name
+#: model:ir.model.fields,field_description:bss_split_partner_name.field_res_partner_first_name
+#: model:ir.model.fields,field_description:bss_split_partner_name.field_res_users_first_name
+#: model:ir.ui.view,arch_db:bss_split_partner_name.view_partner_split_form
+#: model:ir.ui.view,arch_db:bss_split_partner_name.view_partner_split_simple_form
+#: model:ir.ui.view,arch_db:bss_split_partner_name.view_user_split_form
+msgid "First Name"
+msgstr "Prénom"
 
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_ci
-msgid "Ci booklet"
-msgstr "Livret Ci"
+#. module: bss_split_partner_name
+#: model:ir.model.fields,field_description:bss_split_partner_name.field_res_partner_last_name
+#: model:ir.model.fields,field_description:bss_split_partner_name.field_res_users_last_name
+#: model:ir.ui.view,arch_db:bss_split_partner_name.view_partner_split_form
+#: model:ir.ui.view,arch_db:bss_split_partner_name.view_partner_split_simple_form
+#: model:ir.ui.view,arch_db:bss_split_partner_name.view_user_split_form
+msgid "Last Name"
+msgstr "Nom"
 
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_g
-msgid "Border authorization"
-msgstr "Autorisation frontalière"
-
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_n
-msgid "N booklet"
-msgstr "Livret N"
-
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_s
-msgid "Authorization for people to protect"
-msgstr "Autorisation pour les personnes à protéger"
-
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_c
-msgid "Establishment authorization"
-msgstr "Autorisation d'établissement"
-
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_b
-msgid "B permit"
-msgstr "Permis B"
-
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_b
-msgid "Living authorization"
-msgstr "Autorisation de séjour"
-
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_l
-msgid "Short-lived authorization"
-msgstr "Autorisation de courte durée"
-
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_l
-msgid "L permit"
-msgstr "Permis L"
-
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_g
-msgid "G booklet"
-msgstr "Livret G"
-
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_ci
-msgid "Living authorization (diplomat)"
-msgstr "Autorisation de séjour (diplomate)"
-
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,description:bss_resident_permit.bluestar_resident_permit_f
-msgid "Authorization for temporarily admitted foreigners"
-msgstr "Autorisation pour étrangers admis provisoirement"
-
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_c
-msgid "C permit"
-msgstr "Permis C"
-
-#. module: bss_resident_permit
-#: model:ir.model,name:bss_resident_permit.model_bluestar_resident_permit
-msgid "Resident permit"
-msgstr "Permis de séjour"
-
-#. module: bss_resident_permit
-#: field:bluestar.resident_permit,name:0
+#. module: bss_split_partner_name
+#: model:ir.ui.view,arch_db:bss_split_partner_name.view_partner_split_form
+#: model:ir.ui.view,arch_db:bss_split_partner_name.view_partner_split_simple_form
 msgid "Name"
 msgstr "Nom"
 
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_s
-msgid "S booklet"
-msgstr "Livret S"
-
-#. module: bss_resident_permit
-#: model:bluestar.resident_permit,name:bss_resident_permit.bluestar_resident_permit_f
-msgid "F booklet"
-msgstr "Livret F"
-
-#. module: bss_resident_permit
-#: model:ir.actions.act_window,name:bss_resident_permit.action_bluestar_resident_permit_form
-msgid "Resident Permit"
-msgstr "Permis de séjour"
-
-#. module: bss_resident_permit
-#: field:bluestar.resident_permit,description:0
-msgid "Description"
-msgstr "Description"
+#. module: bss_split_partner_name
+#: model:ir.model,name:bss_split_partner_name.model_res_partner
+msgid "Partner"
+msgstr "Partenaire"

@@ -1,58 +1,94 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * bss_marital_status
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 7.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-26 09:37+0000\n"
-"PO-Revision-Date: 2014-07-03 13:43+0200\n"
+"POT-Creation-Date: 2017-10-18 13:17+0000\n"
+"PO-Revision-Date: 2017-10-18 13:32+0200\n"
 "Last-Translator: Hervé <herve.martinet@blues2.ch>\n"
-"Language-Team: \n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Pootle 2.5.0\n"
-"X-POOTLE-MTIME: 1404387831.0\n"
+"X-POOTLE-MTIME: 1508329947.0\n"
 
 #. module: bss_marital_status
-#: model:ir.model,name:bss_marital_status.model_bluestar_marital_status
-msgid "Marital status"
-msgstr "État civil"
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status_create_uid
+msgid "Created by"
+msgstr "Créé par"
 
 #. module: bss_marital_status
-#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_widower
-msgid "Widow, widower"
-msgstr "Veuve, veuf"
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status_create_date
+msgid "Created on"
+msgstr "Créé le"
 
 #. module: bss_marital_status
-#: field:bluestar.marital_status,name:0
-msgid "Name"
-msgstr "Nom"
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status_display_name
+msgid "Display Name"
+msgstr "Nom affiché"
 
 #. module: bss_marital_status
-#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_divorced
+#: model:bss.marital_status,name:bss_marital_status.bss_marital_status_divorced
 msgid "Divorced"
 msgstr "Divorcé"
 
 #. module: bss_marital_status
-#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_married
-msgid "Married"
-msgstr "Marié"
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status_id
+msgid "ID"
+msgstr "ID"
 
 #. module: bss_marital_status
-#: model:ir.actions.act_window,name:bss_marital_status.action_bluestar_marital_status_form
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status___last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: bss_marital_status
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status_write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: bss_marital_status
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status_write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: bss_marital_status
+#: model:ir.actions.act_window,name:bss_marital_status.bss_marital_status_action
+#: model:ir.ui.menu,name:bss_marital_status.bss_marital_status_menu
 msgid "Marital Status"
 msgstr "État civil"
 
 #. module: bss_marital_status
-#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_single
+#: model:ir.model,name:bss_marital_status.model_bss_marital_status
+msgid "Marital status"
+msgstr "État civil"
+
+#. module: bss_marital_status
+#: model:bss.marital_status,name:bss_marital_status.bss_marital_status_married
+msgid "Married"
+msgstr "Marié"
+
+#. module: bss_marital_status
+#: model:ir.model.fields,field_description:bss_marital_status.field_bss_marital_status_name
+msgid "Name"
+msgstr "Nom"
+
+#. module: bss_marital_status
+#: model:bss.marital_status,name:bss_marital_status.bss_marital_status_pacse
+msgid "PACS (civil partnership)"
+msgstr "Pacsé"
+
+#. module: bss_marital_status
+#: model:bss.marital_status,name:bss_marital_status.bss_marital_status_single
 msgid "Single"
 msgstr "Célibataire"
 
 #. module: bss_marital_status
-#: model:bluestar.marital_status,name:bss_marital_status.bss_marital_status_pacse
-msgid "PACS (civil partnership)"
-msgstr "Pacsé"
+#: model:bss.marital_status,name:bss_marital_status.bss_marital_status_widower
+msgid "Widow, widower"
+msgstr "Veuve, veuf"

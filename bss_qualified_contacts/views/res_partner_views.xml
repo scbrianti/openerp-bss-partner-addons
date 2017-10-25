@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+
+        <record id="res_partner_form_view_inherit_bss_qualified_contacts" model="ir.ui.view">
+            <field name="name">res_partner.form.inherit.bss_qualified_contacts</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field eval="1" name="priority"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[field[@name='child_ids']]" position="attributes">
+                    <attribute name="string">Structure</attribute>
+                </xpath>
+                <xpath expr="//page[field[@name='child_ids']]" position="after">
+                    <page string="Contacts">
+                        <field name="qualified_contact_rel_ids" widget="one2many_action" context="{'on_click_action': 'open_contact'}">
+                            <tree editable="bottom">
+                                <field name="contact_id" />
+                                <field name="qualifier_id" />
+                                <field name="phone" />
+                                <field name="mobile" />
+                                <button name="open_contact" type="object" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+</openerp>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="sequence_res_partner_ref" model="ir.sequence">
+            <field name="name">Partner Reference</field>
+            <field name="code">bss.partner.ref</field>
+            <field name="prefix">PER-</field>
+            <field name="padding">9</field>
+        </record>
+    </data>
+</openerp>

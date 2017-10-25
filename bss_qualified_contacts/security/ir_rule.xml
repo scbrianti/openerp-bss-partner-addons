@@ -2,8 +2,8 @@
 <openerp>
     <data>
 
-        <record id="bss_partner_qualifier_protected" model="ir.rule">
-            <field name="name">bss.partner.qualifier.protected.rule</field>
+        <record id="bss_partner_qualifier_rule_protected" model="ir.rule">
+            <field name="name">bss_partner_qualifier.rule.protected</field>
             <field name="model_id" ref="model_bss_partner_qualifier" />
             <field name="global" eval="True" />
             <field name="domain_force">[('protected', '=', False)]</field>

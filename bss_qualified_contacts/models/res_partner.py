@@ -20,9 +20,16 @@ class PartnerQualifiedContactRel(models.Model):
     parent_id = fields.Many2one('res.partner', "Parent")
     contact_id = fields.Many2one('res.partner', "Contact")
     qualifier_id = fields.Many2one('bss.partner.qualifier', "Qualifier")
-    phone = fields.Char("Phone", related='contact_id.phone', readonly=True)
-    mobile = fields.Char(
-        string="Mobile", related='contact_id.mobile', readonly=True)
+    # Cannot be related because cannot know if type is Char or Phone
+    phone = fields.Char("Phone", compute='_compute_phones')
+    mobile = fields.Char("Mobile", compute='_compute_phones')
+
+    @api.multi
+    @api.depends('contact_id', 'contact_id.phone', 'contact_id.mobile')
+    def _compute_phones(self):
+        for partner in self:
+            partner.phone = partner.contact_id.phone
+            partner.mobile = partner.contact_id.mobile
 
     @api.multi
     def open_contact(self):

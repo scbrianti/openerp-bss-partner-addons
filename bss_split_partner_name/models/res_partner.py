@@ -19,7 +19,7 @@ class Partner(models.Model):
     def _full_name(first_name, last_name):
         """Private method to override if you want to change the computed name.
         """
-        return "{} {}".format(first_name, last_name)
+        return u"{} {}".format(first_name, last_name)
 
     @api.model
     def create(self, vals):

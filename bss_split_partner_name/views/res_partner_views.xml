@@ -35,19 +35,11 @@
                 <field name="last_name" placeholder="Last Name" class="oe_inline"
                     attrs="{'invisible': [('is_company', '!=', False)], 'required': [('type', '=', 'contact'), ('is_company', '=', False)]}" />
             </field>
-            <xpath expr="//field[@name='child_ids']/form//hr" position="after">
-                <field name="is_company" invisible="1"/>
-                <field name="company_type" string=" " widget="radio"
-                        class="oe_edit_only"
-                        options="{'horizontal': true}"/>
-            </xpath>
             <xpath expr="//field[@name='child_ids']/form//field[@name='name']" position="replace">
-                <field name="name" default_focus="1" placeholder="Name"
-                    attrs="{'invisible': [('is_company', '=', False)], 'required': [('type', '=', 'contact'), ('is_company', '!=', False)]}"/>
                 <field name="first_name" default_focus="1" placeholder="First Name"
-                    attrs="{'invisible': [('is_company', '!=', False)], 'required': [('type', '=', 'contact'), ('is_company', '=', False)]}"/>
+                    attrs="{'required': [('type', '=', 'contact')]}"/>
                 <field name="last_name" placeholder="Last Name"
-                    attrs="{'invisible': [('is_company', '!=', False)], 'required': [('type', '=', 'contact'), ('is_company', '=', False)]}" />
+                    attrs="{'required': [('type', '=', 'contact')]}" />
             </xpath>
         </field>
     </record>
